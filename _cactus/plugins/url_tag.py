@@ -43,7 +43,7 @@ def static(context, link_url):
     
         url = link_url
     url = "{0}{1}".format(site.url or "",url)
-    print "static", url
+    # print "static", url
 
     return url
 
@@ -75,9 +75,9 @@ def url(context, link_url):
         return url.rsplit('index.html', 1)[0]
 
 
-    print "url", url
+    # print "url", url
     return url
 
-print "registering tags"
+# print "registering tags"
 register.simple_tag(takes_context=True)(static)
 register.simple_tag(takes_context=True)(url)

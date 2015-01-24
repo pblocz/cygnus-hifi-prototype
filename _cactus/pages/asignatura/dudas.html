@@ -11,7 +11,7 @@
       </span>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
-</div>2
+</div>
 
 <div class="row media-nopadding filterable"> 
 
@@ -27,9 +27,9 @@
 		<h4 class="media-heading">
 		  <a href="#"> {{c.titulo}} </a>
 		</h4>
-		<ul class="text-muted">
-		    <li>{{c.autor}} | {{c.fecha}} | {{c.respuestas|length}} respuestas</li>
-		</ul>
+		<div class="text-muted">
+		    {{c.autor}} | {{c.fecha}} | {{c.respuestas|length}} respuestas
+		</div>
 	    </div>
 	    <div class="pull-right btn-group" role="group">
 		<button type="button" class="btn btn-default btn-save">
