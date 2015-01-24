@@ -5,7 +5,7 @@ from distutils.dir_util import copy_tree
 
 logger = logging.getLogger(__name__)
 
-BUILD_DIR = ".build/"
+BUILD_DIR = ".build/dsi-prototype"
 EXPORT_DIR = "../"
 
 
