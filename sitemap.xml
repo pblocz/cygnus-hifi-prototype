@@ -1,87 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <urlset xmlns="http://www.google.com/schemas/sitemap/0.84">
     <url>
-        <loc>/dsi-prototype/index.html</loc>
+        <loc>/index.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/dsi-prototype/perfil/entregas.html</loc>
+        <loc>/perfil/entregas.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/dsi-prototype/perfil/asignaturas.html</loc>
+        <loc>/perfil/asignaturas.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/dsi-prototype/perfil/index.html</loc>
+        <loc>/perfil/index.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/dsi-prototype/perfil/apuntes.html</loc>
+        <loc>/perfil/apuntes.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/dsi-prototype/perfil/dudas.html</loc>
+        <loc>/perfil/dudas.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/dsi-prototype/contact.html</loc>
+        <loc>/contact.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/dsi-prototype/error.html</loc>
+        <loc>/about.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/dsi-prototype/about.html</loc>
+        <loc>/asignatura/calificaciones.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/dsi-prototype/asignatura/calificaciones.html</loc>
+        <loc>/asignatura/entregas.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/dsi-prototype/asignatura/entregas.html</loc>
+        <loc>/asignatura/apuntes.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/dsi-prototype/asignatura/apuntes.html</loc>
+        <loc>/asignatura/general.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/dsi-prototype/asignatura/general.html</loc>
+        <loc>/asignatura/dudas.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/dsi-prototype/asignatura/dudas.html</loc>
+        <loc>/asignatura/extras.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/dsi-prototype/asignatura/extras.html</loc>
+        <loc>/asignatura/problemas.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/dsi-prototype/asignatura/problemas.html</loc>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>/dsi-prototype/asignatura/dudas_details.html</loc>
+        <loc>/asignatura/dudas_details.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
