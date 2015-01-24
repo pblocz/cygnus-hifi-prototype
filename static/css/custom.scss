@@ -1,0 +1,265 @@
+$container-width: 800px;
+$main-offset: 30px;
+
+$notify-color: red;
+$second-color: #999999;
+$light-second-color: lighten($second-color,20%);
+$heart-color: #EA70A3;
+
+/* bootstrap media queries 
+@media (min-width: 1200px) 
+@media (min-width: 768px)
+@media (min-width: 992px)
+*/
+
+
+.vertical-middle {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+
+
+// 768 -- 771 hay prob
+@media (min-width: 768px) {
+	.container{ max-width: 760px; }
+}
+
+@media (min-width: 992px) {
+	.container { max-width: 990px; }
+}
+
+@media (min-width: 1200px) {
+	.container { max-width: 1100px; }
+}
+
+.main {
+	padding-top: $main-offset;
+}
+
+
+
+$search-height: 34px;
+$half-sh: $search-height / 2.0;
+.search-bar {
+	width: 290px;
+	display: inline-block;
+	padding: 0;
+	margin-bottom: 0;
+	margin-top: 11px;
+
+	.input-group {
+		input:first-child {
+			border-bottom-left-radius: $half-sh;
+			border-top-left-radius: $half-sh;
+		}
+	}
+
+	// Fix vertical positioniong
+	.input-group-btn { vertical-align: initial; }
+
+	.bootstrap-select.search-select {
+		width: initial;
+		border-radius: 0;
+		padding: 0;
+		width: 42px!important;
+		outline: none;
+
+		> .selectpicker { border-radius: 0; padding-left: 6px; padding-right: 16px; }
+		.caret { right: 8px; }
+		
+		.text-muted { color: inherit; }
+	}
+
+	.search-button { 
+		left: -4px;
+		border-bottom-right-radius: $half-sh;
+		border-top-right-radius: $half-sh;
+		outline: none;
+	}
+
+}
+
+
+.nav.navbar-nav {
+	> li > a {
+		font-size: 20px;
+		.badge {
+			background-color: $notify-color;
+			position: absolute;
+			top: 7px;
+			left: 28px;
+			border-radius: 4px;
+			padding: 3px;
+		}
+
+	}
+
+	// special element, user profile
+	.user-navbar {
+		> a {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 14px;
+			> img { 
+				width: 35px;
+				margin-right: 7px;
+			}
+
+			font-size: 17px;
+		}
+
+		> a.active {
+			background-color: #222222;
+			color: #ffffff;
+		}
+
+		&:hover {
+			> ul.dropdown-menu { display: block; }
+			>a {
+				background-color: #222222;
+				color: #ffffff;
+			}
+		}
+	}
+}
+
+.jumbotron {
+	padding: 10px 20px;
+
+	h1 { font-size: 40px; margin: 10px 0; }
+}
+
+.tabs-main {
+	margin-top: 30px;
+}
+
+.media-nopadding .media{
+	margin-top: 30px;
+}
+
+
+
+// countdown counter style
+
+.countdown {
+    > li { 
+	padding: 0; 
+	float: left; 
+	vertical-align: middle; 
+	line-height: 44px; 
+	&.day + li {
+	    margin-right: 6px;
+	}
+    }
+}
+
+
+// panel styling
+.panel .media-body .list-unstyled > li {
+    display: inline-block;
+}
+
+.bar-sep li {
+    &:before{ content:" | "; }
+    &:first-child:before {content:""}
+}
+
+// profile style
+
+.profile {
+    .profile-image > img { 
+	width: 100%;
+	max-width: 200px;
+    }
+    .profile-info {
+	padding-top: 20px;
+
+	.profile-name {
+	    font-weight: bold;
+	    font-size: 20px;
+	    margin-bottom: 20px;
+
+	    > span {
+		margin-right: 8px;
+		white-space: nowrap;
+		&:last-child { margin-right: 0; }
+	    }
+	}
+	.profile-element {
+	    padding: 2px 0;
+	    color: $second-color;
+	}
+    }
+}
+
+.menu-nav {
+
+    > li > a { 
+	color: $second-color;
+	padding: 6px 8px; 
+    }
+}
+
+
+// set style for perfil entregas
+.entregas-content {
+    margin-top: 15px;
+
+    .media {
+	padding: 0 40px;
+	margin: 20px 0;
+    }
+}
+
+
+// set style for perfil apuntes
+.saved .glyphicon-heart { color: $heart-color; }
+
+
+// event dropdown style
+
+.dropdown-menu {
+    border: 2px solid $second-color;
+    border-top-width: 0px;
+    padding: 0px;
+    max-height: 250px;
+
+    .event-list {
+	min-width: 200px;
+	padding: 10px 0;
+
+	.event {
+	    padding: 8px 10px;
+	    border-bottom: 1px solid $light-second-color;
+	    &:last-child { border-bottom: none; }
+	    .event-heading {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		margin: 0;
+	    }
+	    .event-description {
+		font-size: 80%;
+		color: $second-color;
+	    }
+	}
+    }
+}
+
+
+.dotted-list {
+    padding: 0px;
+    > li{
+	display: inline; 
+	white-space: nowrap;
+
+	&:after { 
+	    content:  "-"; /*\00b7";*/ 
+	    padding: 3px; 
+	}
+	&:last-child:after { content: none; }
+    }
+}

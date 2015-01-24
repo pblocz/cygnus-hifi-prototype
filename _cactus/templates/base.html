@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{% block title %}{%endblock%}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="{% static '/static/css/bootstrap.css' %}">
+        <style>
+         body {
+             padding-top: 50px;
+             padding-bottom: 20px;
+         }
+        </style>
+        <link rel="stylesheet" href="{% static '/static/css/bootstrap-theme.css' %}">
+        <link rel="stylesheet" href="{% static '/static/css/main.css' %}">
+        <link rel="stylesheet" href="{% static '/static/css/zabuto_calendar.min.css' %}">
+        <link rel="stylesheet" href="{% static '/static/css/bootstrap-select.css' %}">
+	<link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="{% static '/static/css/animate.css' %}">
+
+
+        <link rel="stylesheet" href="{% static '/static/css/custom.css' %}">
+
+	<!-- global data initialization -->
+	<script language="javascript">
+	 window.APP_DATA = {{data.json}};
+	</script>
+        <script src="{% static '/static/js/vendor/modernizr-2.6.2.js' %}"></script>
+    </head>
+
+    <body class="{%block body-class%}{%endblock%}">
+
+	{% include "topbar/topbar.djhtml" %}
+
+	<div class="container main">
+		{% block body %}{% endblock %}
+	</div>
+
+
+	<!-- Add here all underscore templates -->
+	{% underscore_templates %}
+
+	<script src="{% static '/static/js/vendor/jquery-1.10.1.js' %}"></script>
+	<script src="{% static '/static/js/vendor/bootstrap.js' %}"></script>
+	<script src="{% static '/static/js/vendor/underscore.js' %}"></script>
+	<script src="{% static '/static/js/vendor/zabuto_calendar.min.js' %}"></script>
+	<script src="{% static '/static/js/vendor/bootstrap-select.js' %}"></script>
+	<script src="{% static '/static/js/vendor/jquery.downCount.js' %}"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+	<script src="{% static '/static/js/vendor/bootstrap-list-filter.src.js' %}"></script>
+	<script src="{% static '/static/js/vendor/bootstrap-growl.js' %}"></script>
+	<script src="{% static '/static/js/vendor/jquery.slimscroll.min.js' %}"></script>
+
+	<script src="{% static '/static/js/main.js' %}"></script>
+
+    </body>
+
+    {% block scripts %}
+    {% endblock %}
+
+</html>

@@ -1,0 +1,28 @@
+{% extends 'asignatura.djhtml' %}
+
+{% block tab_main %}
+
+
+<div class="row">
+
+ {% for c in asignatura.data.notas %}
+ 
+  <div class="col-sm-6 col-sm-offset-3 media">
+    
+    <div class="media-body pull-center">
+      <h4 class="media-heading">
+	{% if c.entrega %}
+	<a href={{c.url}}>{{c.nombre}}</a>
+	{% else %}
+	{{c.nombre}}
+{% endif %}
+      </h4>
+    </div>
+    <div class="pull-right">{{c.nota}} / {{c.max}}</div>
+  </div>
+ 
+    {% endfor %}
+
+
+</div>
+{% endblock %}

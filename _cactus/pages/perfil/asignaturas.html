@@ -1,0 +1,32 @@
+<!-- -*- engine:django -*- -->
+{% extends "perfil.djhtml" %}
+
+{% block profile-main %}
+    <div class="row">
+	<div class="col-md-6 search-input">
+	    <div class="input-group">
+		<input type="text" class="form-control" placeholder="Search for...">
+		<span class="input-group-btn">
+		    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+		</span>
+	    </div><!-- /input-group -->
+	</div><!-- /.col-lg-6 -->
+    </div> <!-- /.row -->
+
+    <div class="entregas-content row media-nopadding filterable">
+	{% for a in data.notifications.asignaturas %}
+	    
+		<div class="col-md-6 media">
+		    <div class="media-body pull-left">
+			<h4 class="media-heading">
+			    [{{a.siglas}}] {{a.nombre}} 
+			</h4>
+			<div class="text-muted"> 
+			    Profesor: {{a.profesor}}
+			</div>
+		    </div>
+		</div>
+	    {% endfor %}
+    </div>
+	
+{% endblock %}

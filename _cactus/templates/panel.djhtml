@@ -1,0 +1,25 @@
+{% comment %}
+  This template generates cards for the elements in a folder
+
+  @param title
+  @param elements
+  @param class
+  @param template
+{% endcomment %}
+<div class="col-sm-6">
+    <div class="panel {% if class %}{{class}}{% else %}panel-default{% endif %}">
+
+	<div class="panel-heading">
+	    <h3 class="panel-title">
+		<a href="">{{ title }}</a>
+	    </h3>
+	</div>
+	<div class="panel-body">
+	    {% if template %}
+		{% include template with content=elements %}
+	    {% else %}
+		{{ elements }}
+	    {% endif %}
+	</div>
+    </div>
+</div>

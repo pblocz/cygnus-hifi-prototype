@@ -1,0 +1,172 @@
+.vertical-middle {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: 760px;   }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 990px;   }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1100px;   }
+}
+
+.main {
+  padding-top: 30px; }
+
+  .search-bar {
+    width: 290px;
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 11px; }
+    .search-bar .input-group input:first-child {
+      border-bottom-left-radius: 17px;
+      border-top-left-radius: 17px; }
+    .search-bar .input-group-btn {
+      vertical-align: initial; }
+      .search-bar .bootstrap-select.search-select {
+        width: initial;
+        border-radius: 0;
+        padding: 0;
+        width: 42px !important;
+        outline: none; }
+        .search-bar .bootstrap-select.search-select > .selectpicker {
+          border-radius: 0;
+          padding-left: 6px;
+          padding-right: 16px; }
+          .search-bar .bootstrap-select.search-select .caret {
+            right: 8px; }
+            .search-bar .bootstrap-select.search-select .text-muted {
+              color: inherit; }
+    .search-bar .search-button {
+      left: -4px;
+      border-bottom-right-radius: 17px;
+      border-top-right-radius: 17px;
+      outline: none; }
+
+.nav.navbar-nav > li > a {
+  font-size: 20px; }
+  .nav.navbar-nav > li > a .badge {
+    background-color: red;
+    position: absolute;
+    top: 7px;
+    left: 28px;
+    border-radius: 4px;
+    padding: 3px; }
+.nav.navbar-nav .user-navbar > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 14px;
+  font-size: 17px; }
+  .nav.navbar-nav .user-navbar > a > img {
+    width: 35px;
+    margin-right: 7px; }
+.nav.navbar-nav .user-navbar > a.active {
+  background-color: #222222;
+  color: #ffffff; }
+  .nav.navbar-nav .user-navbar:hover > ul.dropdown-menu {
+    display: block; }
+    .nav.navbar-nav .user-navbar:hover > a {
+      background-color: #222222;
+      color: #ffffff; }
+
+.jumbotron {
+  padding: 10px 20px; }
+  .jumbotron h1 {
+    font-size: 40px;
+    margin: 10px 0; }
+
+.tabs-main {
+  margin-top: 30px; }
+
+  .media-nopadding .media {
+    margin-top: 30px; }
+
+    .countdown > li {
+      padding: 0;
+      float: left;
+      vertical-align: middle;
+      line-height: 44px; }
+      .countdown > li.day + li {
+        margin-right: 6px; }
+
+.panel .media-body .list-unstyled > li {
+  display: inline-block; }
+
+  .bar-sep li:before {
+    content: " | "; }
+    .bar-sep li:first-child:before {
+      content: ""; }
+
+.profile .profile-image > img {
+  width: 100%;
+  max-width: 200px; }
+  .profile .profile-info {
+    padding-top: 20px; }
+    .profile .profile-info .profile-name {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 20px; }
+      .profile .profile-info .profile-name > span {
+        margin-right: 8px;
+        white-space: nowrap; }
+        .profile .profile-info .profile-name > span:last-child {
+          margin-right: 0; }
+    .profile .profile-info .profile-element {
+      padding: 2px 0;
+      color: #999999; }
+
+.menu-nav > li > a {
+  color: #999999;
+  padding: 6px 8px; }
+
+.entregas-content {
+  margin-top: 15px; }
+  .entregas-content .media {
+    padding: 0 40px;
+    margin: 20px 0; }
+
+.saved .glyphicon-heart {
+  color: #EA70A3; }
+
+  .dropdown-menu {
+    border: 2px solid #999999;
+    border-top-width: 0px;
+    padding: 0px;
+    max-height: 250px; }
+    .dropdown-menu .event-list {
+      min-width: 200px;
+      padding: 10px 0; }
+      .dropdown-menu .event-list .event {
+        padding: 8px 10px;
+        border-bottom: 1px solid #ccc; }
+        .dropdown-menu .event-list .event:last-child {
+          border-bottom: none; }
+          .dropdown-menu .event-list .event .event-heading {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin: 0; }
+            .dropdown-menu .event-list .event .event-description {
+              font-size: 80%;
+              color: #999999; }
+
+.dotted-list {
+  padding: 0px; }
+  .dotted-list > li {
+    display: inline;
+    white-space: nowrap; }
+    .dotted-list > li:after {
+      content: "-";
+      padding: 3px; }
+      .dotted-list > li:last-child:after {
+        content: none; }

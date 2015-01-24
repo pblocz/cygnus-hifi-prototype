@@ -1,0 +1,20 @@
+n<!-- -*- engine: django -*- -->
+{% extends 'perfil.djhtml' %}
+
+{% block profile-main %}
+    <div class="row">
+	<div class="col-lg-6">
+	    <div class="input-group search-input">
+		<input type="text" class="form-control" placeholder="Search for...">
+		<span class="input-group-btn">
+		    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+		</span>
+	    </div><!-- /input-group -->
+	</div><!-- /.col-lg-6 -->
+    </div>
+    <div class="row media-nopadding filterable">
+	<div class="drender" data-var="notifications.usuario.perfil.apuntes"
+	    data-template="lista-apuntes">
+	</div>
+    </div>
+{% endblock %}

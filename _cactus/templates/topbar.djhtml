@@ -1,0 +1,87 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+	<div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="{% url "/index.html" %}">Project name</a>
+	</div>
+
+	<div class="navbar-collapse collapse">
+
+	    <form class="navbar-form search-bar">
+		<div class="input-group">
+		    <input type="text" class="search form-control" placeholder="Search for...">
+		    <span class="input-group-btn">
+			<select class="search-select"  data-show-subtext="true">
+			    <option selected="selected"
+				    data-icon='glyphicon-globe' data-subtext="todo">
+			    </option>
+			    <option data-icon='glyphicon-book' data-subtext="asignaturas">
+			    </option>
+			    <option data-icon='glyphicon-pencil' data-subtext="apuntes">
+			    </option>
+			    <option data-icon='glyphicon-question-sign' data-subtext="dudas">
+			    </option>				
+			</select>
+
+			<button class="btn btn-default search-button"
+				type="button">
+			    <span class="glyphicon glyphicon-search">
+			    </span>
+			</button>
+		    </span>
+		</div>
+	    </form>
+
+	    <ul class="nav navbar-nav navbar-right">
+		<li class="dropdown user-navbar">
+		    <a href="{% url '/perfil/index.html' %}" 
+		       class="{% if_current_page '/perfil/index.html' 'active' '' %} dropdown-toggle disabled" data-toggle="dropdown">
+			<img src="{% static "/static/images/40x40.gif" %}" class="profile-image img-circle"> Username <b class="caret"></b>
+		    </a>
+		    <ul class="dropdown-menu">
+			{% for m in data.notifications.usuario.perfil.menu %}
+			    <li class="{% if_current_page m.url 'active' '' %}">
+				<a href="{{m.url}}">{{m.nombre | safe}}</a>
+			    </li>
+			{% endfor %}
+		    </ul>			
+		</li>
+
+		<li class="dropdown {% if_current_page '/contact.html' 'active' '' %}">
+		    <a href="{% url '/contact.html' %}" class="dropdown-toggle" data-toggle="dropdown">
+			<span class="glyphicon glyphicon-calendar"></span>
+			<span class="drender badge badge-notify" data-var="notifications.evts"></span>
+		    </a>
+
+		    {% include "dropdown/calendario.djhtml" with content=data.notifications.calendario %}
+		</li>
+		<li class="dropdown {% if_current_page '/contact.html' 'active' '' %}">
+		    <a href="{% url '/contact.html' %}" class="dropdown-toggle" data-toggle="dropdown">
+			<span class="glyphicon glyphicon-inbox"></span>
+			<span class="drender badge badge-notify" data-var="notifications.nots"></span>
+		    </a>
+		    {% include "dropdown/eventos.djhtml" with content=data.notifications.eventos %}
+		</li>
+		<li class="dropdown {% if_current_page '/contact.html' 'active' '' %}">
+		    <a href="{% url '/contact.html' %}" class="dropdown-toggle" data-toggle="dropdown">
+			<span class="glyphicon glyphicon-envelope"></span>
+			<span class="drender badge badge-notify" data-var="notifications.msgs"></span>
+		    </a>
+		    {% include "dropdown/mensajes.djhtml" with content=data.notifications.correo %}
+		</li>
+		
+		<!--
+			<li class="{% if_current_page '/about.html' 'active' '' %}">
+			  <a href="{% url '/about.html' %}">
+			    <span class="glyphicon glyphicon-cog"></span>
+			  </a>
+			</li>
+			-->
+	    </ul>
+	</div><!--/.navbar-collapse -->
+    </div>
+</div>

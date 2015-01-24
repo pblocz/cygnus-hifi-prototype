@@ -1,0 +1,40 @@
+{% extends 'asignatura.djhtml' %}
+
+{% block tab_main %}
+    <div class="row">
+	<div class="col-md-6 search-input">
+	    <div class="input-group">
+		<input type="text" class="form-control" placeholder="Search for...">
+		<span class="input-group-btn">
+		    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+		</span>
+	    </div><!-- /input-group -->
+	</div><!-- /.col-lg-6 -->
+    </div> <!-- /.row -->
+
+<div class="entregas-content row media-nopadding filterable">
+ {% for c in asignatura.data.entregas %}
+ <div class="col-md-6 media">
+		    <div class="media-body pull-left">
+			<h4 class="media-heading">
+			    {{c.titulo}} 
+			</h4>
+			<div class="text-muted"> 
+			    {{c.fecha | make_list | slice:":10" | join:"" }} | {{c.autor}}
+			</div>
+		    </div>
+		    <div class="pull-right">
+			<ul class="countdown list-inline" data-date="{{c.fecha}}">
+			    <li class="day"> <span class="days">00</span></li>
+			    <li class="seperator">d</li>
+			    <li> <span class="hours">00</span></li>
+			    <li class="seperator">:</li>
+			    <li> <span class="minutes">00</span></li>
+			</ul>		
+		    </div>
+		</div> 
+    {% endfor %}
+
+
+</div>
+{% endblock %}

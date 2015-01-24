@@ -1,0 +1,24 @@
+<form class="navbar-form search-bar">
+    <div class="input-group">
+	<input type="text" class="search form-control" placeholder="Search for...">
+	<span class="input-group-btn">
+	    <select class="search-select"  data-show-subtext="true">
+		<option selected="selected"
+			data-icon='glyphicon-globe' data-subtext="todo">
+		</option>
+		<option data-icon='glyphicon-book' data-subtext="asignaturas">
+		</option>
+		<option data-icon='glyphicon-pencil' data-subtext="apuntes">
+		</option>
+		<option data-icon='glyphicon-question-sign' data-subtext="dudas">
+		</option>				
+	    </select>
+
+	    <button class="btn btn-default search-button"
+		    type="button">
+		<span class="glyphicon glyphicon-search">
+		</span>
+	    </button>
+	</span>
+    </div>
+</form>

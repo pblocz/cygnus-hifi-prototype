@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>[ANUM] Analisis Numérico </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/static/css/bootstrap.css">
+        <style>
+         body {
+             padding-top: 50px;
+             padding-bottom: 20px;
+         }
+        </style>
+        <link rel="stylesheet" href="/static/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+        <link rel="stylesheet" href="/static/css/zabuto_calendar.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap-select.css">
+	<link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="/static/css/animate.css">
+
+
+        <link rel="stylesheet" href="/static/css/custom.css">
+
+	<!-- global data initialization -->
+	<script language="javascript">
+	 window.APP_DATA = {"nomodule": {"adsf": {}}, "data_test": {"panels": [{"elements": [["asdf", "asdf", "asdf"]], "template": "list-test.html", "title": "asdfasdf"}]}, "notifications": {"eventos": [{"url": "/asignatura/apuntes.html", "titulo": "Nuevo apunte ANNU", "fecha": "2015-01-11 10:11"}, {"url": "/asignatura/problemas.html", "titulo": "Nuevo Problema", "fecha": "2015-01-11 10:11"}, {"url": "/asignatura/dudas/details.html", "titulo": "Nueva Respuesta en tu duda", "fecha": "2015-01-11 10:11"}], "asignaturas": [{"tutorias": ["L,M 10:30", "J,V 12:30"], "nombre": "Analisis Num\u00e9rico", "menu": [{"url": "/asignatura/general.html", "nombre": "<span class='glyphicon glyphicon-info-sign'></span> General", "id": "general"}, {"url": "/asignatura/apuntes.html", "nombre": "<span class='glyphicon glyphicon-pencil'></span> Apuntes", "id": "apuntes"}, {"url": "/asignatura/problemas.html", "nombre": "<span class='glyphicon glyphicon-check'></span> Problemas", "id": "problemas"}, {"url": "/asignatura/extras.html", "nombre": "<span class='glyphicon glyphicon-share'></span> Compartido", "id": "compartido"}, {"url": "/asignatura/entregas.html", "nombre": "<span class='glyphicon glyphicon-dashboard'></span> Entregas", "id": "entregas"}, {"url": "/asignatura/dudas.html", "nombre": "<span class='glyphicon glyphicon-question-sign'></span> Dudas", "id": "dudas"}, {"url": "/asignatura/calificaciones.html", "nombre": "<span class='glyphicon glyphicon-list-alt'></span> Calificaciones", "id": "calificaciones"}], "profesor": "Maria Rosa Florencia", "siglas": "ANUM", "data": {"dudas": [{"autor": "Juan Martin", "like": "false", "img": "/static/images/40x40.gif", "preg": "alguien sabe que no sabe alguien que esto es una pregunta que alguien pudiese saber que no sabe la respuesta pero alguien quiere saber cual es la respuesta correcta a una pregunta no formulada.", "nuevo": "false", "respuestas": [{"nuevo": "true", "autor": "Diego Garc\u00eda", "positivo": "10", "img": "/static/images/40x40.gif", "negativo": "1", "resp": "No entiendo la pregunta."}, {"nuevo": "false", "autor": "Watson", "positivo": "3", "img": "/static/images/40x40.git", "negativo": "2", "resp": "esta claro que si lo sabia"}], "titulo": "\u00bfQue es...?", "fecha": "22/01/2015"}, {"autor": "Juan Martin", "like": "false", "img": "/static/images/40x40.gif", "preg": "Correcta la respuesta a una pregunta no formulada.", "nuevo": "false", "respuestas": [{"nuevo": "true", "autor": "Diego Garc\u00eda", "positivo": "10", "img": "/static/images/40x40.gif", "negativo": "1", "resp": "No entiendo la pregunta."}, {"nuevo": "false", "autor": "Watson", "positivo": "3", "img": "/static/images/40x40.git", "negativo": "2", "resp": "esta claro que si lo sabia"}], "titulo": "\u00bfPuede ser...?", "fecha": "22/01/2015"}], "apuntes": [{"tamano": "10K", "nombre": "Apunte nuevo", "fecha": "22/01/2015", "img": "/static/images/40x40.gif"}, {"tamano": "10K", "nombre": "Apunte random", "fecha": "10/10/2010", "img": "/static/images/40x40.gif"}, {"tamano": "10B", "nombre": "Apunte 2 random", "fecha": "2/12/2011", "img": "/static/images/40x40.gif"}], "notas": [{"nombre": "Examen A", "nota": "8", "max": "10"}, {"url": "/asignatura/entregas.html", "nombre": "Practica 0", "entrega": "true", "nota": "7", "max": "10"}, {"nombre": "Examen B", "nota": "", "max": "10"}], "entregas": [{"autor": "Juan lu\u00eds", "titulo": "Practica 10", "fecha": "10/02/2015 08:00:00"}, {"autor": "Juan lu\u00eds", "titulo": "Practica 1", "fecha": "01/02/2015 05:00:00"}, {"autor": "Juan lu\u00eds", "titulo": "Practica 0", "fecha": "02/10/2014 05:00:00"}], "problemas": [{"tamano": "10K", "nombre": "Problema nuevo", "fecha": "22/01/2015", "img": "/static/images/40x40.gif"}, {"tamano": "10K", "nombre": "Problema random", "fecha": "10/10/2010", "img": "/static/images/40x40.gif"}, {"tamano": "10B", "nombre": "Problema 2 random", "fecha": "2/12/2011", "img": "/static/images/40x40.gif"}], "extra": [{"tamano": "10K", "autor": "Juan Martin", "like": "false", "img": "/static/images/40x40.gif", "neg": "0", "fecha": "22/01/2015", "pos": "10", "nuevo": "false", "nombre": "Extra nuevo"}, {"tamano": "10K", "autor": "Juan Martin", "like": "false", "img": "/static/images/40x40.gif", "neg": "0", "fecha": "10/10/2010", "pos": "10", "nuevo": "false", "nombre": "Extra random"}, {"tamano": "10B", "autor": "Juan Martin", "like": "false", "img": "/static/images/40x40.gif", "neg": "0", "fecha": "2/12/2011", "pos": "10", "nuevo": "false", "nombre": "Extra 2 random"}]}}], "actual": {"duda": 0, "asignatura": 0, "entrega": 0}, "nots": 3, "msgs": 1, "usuario": {"correo": "anormalez@ucm.es", "apellidos": "Normal Normalez", "perfil": {"menu": [{"url": "/perfil/asignaturas.html", "nombre": "<span class='glyphicon glyphicon-book'></span> Asignaturas"}, {"url": "/perfil/apuntes.html", "nombre": "<span class='glyphicon glyphicon-pencil'></span> Apuntes"}, {"url": "/perfil/compartido.html", "nombre": "<span class='glyphicon glyphicon-share'></span> Compartidos"}, {"url": "/perfil/entregas.html", "nombre": "<span class='glyphicon glyphicon-dashboard'></span> Entregas"}, {"url": "/perfil/dudas.html", "nombre": "<span class='glyphicon glyphicon-question-sign'></span> Dudas"}, {"url": "/perfil/calificaciones.html", "nombre": "<span class='glyphicon glyphicon-list-alt'></span> Calificaciones"}], "dudas": [], "apuntes": []}, "nombre": "Alumno", "curso": "2014/2015", "image": "/static/images/40x40.gif", "telefono": "666 666666"}, "evts": 2, "correo": [{"autor": "Jose Rico Paves", "titulo": "Gracias", "fecha": "2015-01-11 10:11"}], "calendario": [{"titulo": "sometitle", "fecha": "2015-01-11 10:11", "badge": true, "img": "/static/images/40x40.gif"}, {"titulo": "some other title", "fecha": "2015-01-21 22:35", "badge": false, "img": "/static/images/40x40.gif"}]}};
+	</script>
+        <script src="/static/js/vendor/modernizr-2.6.2.js"></script>
+    </head>
+
+    <body class="">
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+	<div class="navbar-header">
+	    <button type="button" class="navbar-toggle" 
+		    data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="/index.html">Project name</a>
+	</div> <!-- .nav-header -->
+
+
+
+	<div class="navbar-collapse collapse">
+	    
+	    
+	    <form class="navbar-form search-bar">
+    <div class="input-group">
+	<input type="text" class="search form-control" placeholder="Search for...">
+	<span class="input-group-btn">
+	    <select class="search-select"  data-show-subtext="true">
+		<option selected="selected"
+			data-icon='glyphicon-globe' data-subtext="todo">
+		</option>
+		<option data-icon='glyphicon-book' data-subtext="asignaturas">
+		</option>
+		<option data-icon='glyphicon-pencil' data-subtext="apuntes">
+		</option>
+		<option data-icon='glyphicon-question-sign' data-subtext="dudas">
+		</option>				
+	    </select>
+
+	    <button class="btn btn-default search-button"
+		    type="button">
+		<span class="glyphicon glyphicon-search">
+		</span>
+	    </button>
+	</span>
+    </div>
+</form>
+
+	    
+	    <ul class="nav navbar-nav navbar-right">
+		<li class="dropdown user-navbar">
+		    <a href="/perfil/index.html" 
+		       class=" dropdown-toggle disabled" data-toggle="dropdown">
+			<img src="/static/images/40x40.gif" class="profile-image img-circle"> Username <b class="caret"></b>
+		    </a>
+		    <ul class="dropdown-menu">
+			
+			    <li class="">
+				<a href="/perfil/asignaturas.html"><span class='glyphicon glyphicon-book'></span> Asignaturas</a>
+			    </li>
+			
+			    <li class="">
+				<a href="/perfil/apuntes.html"><span class='glyphicon glyphicon-pencil'></span> Apuntes</a>
+			    </li>
+			
+			    <li class="">
+				<a href="/perfil/compartido.html"><span class='glyphicon glyphicon-share'></span> Compartidos</a>
+			    </li>
+			
+			    <li class="">
+				<a href="/perfil/entregas.html"><span class='glyphicon glyphicon-dashboard'></span> Entregas</a>
+			    </li>
+			
+			    <li class="">
+				<a href="/perfil/dudas.html"><span class='glyphicon glyphicon-question-sign'></span> Dudas</a>
+			    </li>
+			
+			    <li class="">
+				<a href="/perfil/calificaciones.html"><span class='glyphicon glyphicon-list-alt'></span> Calificaciones</a>
+			    </li>
+			
+		    </ul>			
+		</li>
+
+		<li class="dropdown ">
+		    <a href="/contact.html" class="dropdown-toggle" data-toggle="dropdown">
+			<span class="glyphicon glyphicon-calendar"></span>
+			<span class="drender badge badge-notify" data-var="notifications.evts"></span>
+		    </a>
+
+		    <div class="dropdown-menu">
+    <div class="event-list">
+	
+	    <div class="event">
+		<h4 class="event-heading">
+		    <a href="#">sometitle</a>
+		</h4>
+		<div class="event-description">2015-01-11 10:11</div>
+	    </div>
+	
+	    <div class="event">
+		<h4 class="event-heading">
+		    <a href="#">some other title</a>
+		</h4>
+		<div class="event-description">2015-01-21 22:35</div>
+	    </div>
+	
+    </div>
+</div>
+
+
+
+		</li>
+		<li class="dropdown ">
+		    <a href="/contact.html" class="dropdown-toggle" data-toggle="dropdown">
+			<span class="glyphicon glyphicon-inbox"></span>
+			<span class="drender badge badge-notify" data-var="notifications.nots"></span>
+		    </a>
+		    <div class="dropdown-menu">
+    <div class="event-list">
+	
+	    <div class="event">
+		<h4 class="event-heading">
+		    <a href="/asignatura/apuntes.html">Nuevo apunte ANNU</a>
+		</h4>
+		<div class="event-description">2015-01-11 10:11</div>
+	    </div>
+	
+	    <div class="event">
+		<h4 class="event-heading">
+		    <a href="/asignatura/problemas.html">Nuevo Problema</a>
+		</h4>
+		<div class="event-description">2015-01-11 10:11</div>
+	    </div>
+	
+	    <div class="event">
+		<h4 class="event-heading">
+		    <a href="/asignatura/dudas/details.html">Nueva Respuesta en tu duda</a>
+		</h4>
+		<div class="event-description">2015-01-11 10:11</div>
+	    </div>
+	
+    </div>
+</div>
+
+
+
+		</li>
+		<li class="dropdown ">
+		    <a href="/contact.html" class="dropdown-toggle" data-toggle="dropdown">
+			<span class="glyphicon glyphicon-envelope"></span>
+			<span class="drender badge badge-notify" data-var="notifications.msgs"></span>
+		    </a>
+		    <div class="dropdown-menu">
+    <div class="event-list">
+	
+	    <div class="event">
+		<h4 class="event-heading">
+		    <a href="#">Gracias</a>
+		</h4>
+		<div class="event-description">
+		    <ul class="dotted-list">
+			<li>Jose Rico Paves</li><li>2015-01-11 10:11</li>
+		    </ul>
+		</div>
+	    </div>
+	
+    </div>
+</div>
+
+
+
+		</li>
+		
+		<!--
+			<li class="">
+			  <a href="/about.html">
+			    <span class="glyphicon glyphicon-cog"></span>
+			  </a>
+			</li>
+			-->
+	    </ul>
+	</div><!--/.navbar-collapse -->
+    </div>
+</div>
+
+
+	<div class="container main">
+		
+
+  
+  
+  
+    
+    
+    <div class="jumbotron">
+      <h1>Analisis Numérico</h1>
+    </div>
+
+    <ul class="nav nav-tabs menu-nav">
+      
+	<li role="presentation" id="main_general"
+	    class="active" >
+	  <a href="/asignatura/general.html"><span class='glyphicon glyphicon-info-sign'></span> General</a>
+	</li>
+      
+	<li role="presentation" id="main_apuntes"
+	    class="" >
+	  <a href="/asignatura/apuntes.html"><span class='glyphicon glyphicon-pencil'></span> Apuntes</a>
+	</li>
+      
+	<li role="presentation" id="main_problemas"
+	    class="" >
+	  <a href="/asignatura/problemas.html"><span class='glyphicon glyphicon-check'></span> Problemas</a>
+	</li>
+      
+	<li role="presentation" id="main_compartido"
+	    class="" >
+	  <a href="/asignatura/extras.html"><span class='glyphicon glyphicon-share'></span> Compartido</a>
+	</li>
+      
+	<li role="presentation" id="main_entregas"
+	    class="" >
+	  <a href="/asignatura/entregas.html"><span class='glyphicon glyphicon-dashboard'></span> Entregas</a>
+	</li>
+      
+	<li role="presentation" id="main_dudas"
+	    class="" >
+	  <a href="/asignatura/dudas.html"><span class='glyphicon glyphicon-question-sign'></span> Dudas</a>
+	</li>
+      
+	<li role="presentation" id="main_calificaciones"
+	    class="" >
+	  <a href="/asignatura/calificaciones.html"><span class='glyphicon glyphicon-list-alt'></span> Calificaciones</a>
+	</li>
+       
+    </ul>
+
+    <div class="tabs-main">
+      
+<div class="row">
+    <div class="col-sm-6">
+	<dl class="dl-horizontal">
+	    <dt>Profesor</dt>
+	    <dd>Maria Rosa Florencia</dd>
+	    <dt>Tutoria</dt>
+	    <dd>
+		<ul class="list-unstyled">
+		     
+		    <li>L,M 10:30</li>
+		     
+		    <li>J,V 12:30</li>
+		    
+		</ul>
+	    </dd>
+	    <dt>Descripción</dt>
+	    <dd></dd>
+	</dl>
+    </div>
+
+    
+<div class="col-sm-6">
+    <div class="panel panel-default">
+
+	<div class="panel-heading">
+	    <h3 class="panel-title">
+		<a href="">Apuntes</a>
+	    </h3>
+	</div>
+	<div class="panel-body">
+	    
+		
+<ul class="media-list">
+    
+	<li class="media-middle media apuntes" data-var="notifications.asignaturas.0.data.apuntes.0">
+	    <div class="pull-left">
+		<a href="#" class="pull-left">
+		    <img src="/static/images/40x40.gif" class="media-object"/>
+		</a>
+	    </div>
+	    <div class="media-body pull-left">
+		<h4 class="media-heading">
+		    Apunte nuevo 
+		</h4>
+		<div class="text-muted">10K | 22/01/2015</div>
+	    </div>
+	    <div class="pull-right btn-group" role="group">
+		<button type="button" class="btn btn-default btn-save">
+		    <span class="glyphicon glyphicon-heart"></span>
+		</button>
+		<button type="button" class="btn btn-default">
+		    <span class="glyphicon glyphicon-download-alt"></span>
+		</button>
+	    </div>
+	</li>
+    
+	<li class="media-middle media apuntes" data-var="notifications.asignaturas.0.data.apuntes.1">
+	    <div class="pull-left">
+		<a href="#" class="pull-left">
+		    <img src="/static/images/40x40.gif" class="media-object"/>
+		</a>
+	    </div>
+	    <div class="media-body pull-left">
+		<h4 class="media-heading">
+		    Apunte random 
+		</h4>
+		<div class="text-muted">10K | 10/10/2010</div>
+	    </div>
+	    <div class="pull-right btn-group" role="group">
+		<button type="button" class="btn btn-default btn-save">
+		    <span class="glyphicon glyphicon-heart"></span>
+		</button>
+		<button type="button" class="btn btn-default">
+		    <span class="glyphicon glyphicon-download-alt"></span>
+		</button>
+	    </div>
+	</li>
+    
+	<li class="media-middle media apuntes" data-var="notifications.asignaturas.0.data.apuntes.2">
+	    <div class="pull-left">
+		<a href="#" class="pull-left">
+		    <img src="/static/images/40x40.gif" class="media-object"/>
+		</a>
+	    </div>
+	    <div class="media-body pull-left">
+		<h4 class="media-heading">
+		    Apunte 2 random 
+		</h4>
+		<div class="text-muted">10B | 2/12/2011</div>
+	    </div>
+	    <div class="pull-right btn-group" role="group">
+		<button type="button" class="btn btn-default btn-save">
+		    <span class="glyphicon glyphicon-heart"></span>
+		</button>
+		<button type="button" class="btn btn-default">
+		    <span class="glyphicon glyphicon-download-alt"></span>
+		</button>
+	    </div>
+	</li>
+    
+</ul>
+
+	    
+	</div>
+    </div>
+</div>
+		
+
+    
+<div class="col-sm-6">
+    <div class="panel panel-default">
+
+	<div class="panel-heading">
+	    <h3 class="panel-title">
+		<a href="">Dudas</a>
+	    </h3>
+	</div>
+	<div class="panel-body">
+	    
+		<ul class="media-list">
+  
+    
+	<li class="media-middle media">
+	    <div class="pull-left">
+		<a href="#" class="pull-left">
+		    <img src="/static/images/40x40.gif" class="media-object"/>
+		</a>
+	    </div>
+	    <div class="media-body pull-left">
+		<h4 class="media-heading">
+		  <a href="#" > ¿Que es...?</a>
+		</h4>
+		<ul class="list-unstyled bar-sep">
+		    <li>Juan Martin</li>
+		    <li>22/01/2015</li>
+		    <li>2 respuestas</li>
+		</ul>
+	    </div>
+	    <div class="pull-right btn-group" role="group">
+		<button type="button" class="btn btn-default">
+		    <span class="glyphicon glyphicon-heart"></span>
+		</button>
+		<button type="button" class="btn btn-default">
+		    <span class="glyphicon glyphicon-eye-open"></span>
+		</button>
+
+	    </div>
+	</li>
+    
+	<li class="media-middle media">
+	    <div class="pull-left">
+		<a href="#" class="pull-left">
+		    <img src="/static/images/40x40.gif" class="media-object"/>
+		</a>
+	    </div>
+	    <div class="media-body pull-left">
+		<h4 class="media-heading">
+		  <a href="#" > ¿Puede ser...?</a>
+		</h4>
+		<ul class="list-unstyled bar-sep">
+		    <li>Juan Martin</li>
+		    <li>22/01/2015</li>
+		    <li>2 respuestas</li>
+		</ul>
+	    </div>
+	    <div class="pull-right btn-group" role="group">
+		<button type="button" class="btn btn-default">
+		    <span class="glyphicon glyphicon-heart"></span>
+		</button>
+		<button type="button" class="btn btn-default">
+		    <span class="glyphicon glyphicon-eye-open"></span>
+		</button>
+
+	    </div>
+	</li>
+    
+  
+</ul>
+
+	    
+	</div>
+    </div>
+</div>
+
+
+    
+<div class="col-sm-6">
+    <div class="panel panel-default">
+
+	<div class="panel-heading">
+	    <h3 class="panel-title">
+		<a href="">Entregas</a>
+	    </h3>
+	</div>
+	<div class="panel-body">
+	    
+		<ul class="list-unstyled">
+  
+    
+	<li class="media-middle media">
+	    <div class="pull-left">
+		<a href="#" class="pull-left">
+		    <img src="" class="media-object"/>
+		</a>
+	    </div>
+	    <div class="media-body pull-left">
+		<h4 class="media-heading">
+		    Practica 10 
+		</h4>
+		<div>  10/02/2015 | Juan luís</div>
+	    </div>
+	    <div class="pull-right">
+		<ul class="countdown list-inline" data-date="10/02/2015 08:00:00">
+		    <li class="day"> <span class="days">00</span></li>
+		    <li class="seperator">d</li>
+		    <li> <span class="hours">00</span></li>
+		    <li class="seperator">:</li>
+		    <li> <span class="minutes">00</span></li>
+		    <!--
+		    <li class="seperator">:</li>
+		    <li> <span class="seconds">00</span> </li>
+		    -->
+		</ul>		
+	    </div>
+	</li>
+    
+	<li class="media-middle media">
+	    <div class="pull-left">
+		<a href="#" class="pull-left">
+		    <img src="" class="media-object"/>
+		</a>
+	    </div>
+	    <div class="media-body pull-left">
+		<h4 class="media-heading">
+		    Practica 1 
+		</h4>
+		<div>  01/02/2015 | Juan luís</div>
+	    </div>
+	    <div class="pull-right">
+		<ul class="countdown list-inline" data-date="01/02/2015 05:00:00">
+		    <li class="day"> <span class="days">00</span></li>
+		    <li class="seperator">d</li>
+		    <li> <span class="hours">00</span></li>
+		    <li class="seperator">:</li>
+		    <li> <span class="minutes">00</span></li>
+		    <!--
+		    <li class="seperator">:</li>
+		    <li> <span class="seconds">00</span> </li>
+		    -->
+		</ul>		
+	    </div>
+	</li>
+    
+	<li class="media-middle media">
+	    <div class="pull-left">
+		<a href="#" class="pull-left">
+		    <img src="" class="media-object"/>
+		</a>
+	    </div>
+	    <div class="media-body pull-left">
+		<h4 class="media-heading">
+		    Practica 0 
+		</h4>
+		<div>  02/10/2014 | Juan luís</div>
+	    </div>
+	    <div class="pull-right">
+		<ul class="countdown list-inline" data-date="02/10/2014 05:00:00">
+		    <li class="day"> <span class="days">00</span></li>
+		    <li class="seperator">d</li>
+		    <li> <span class="hours">00</span></li>
+		    <li class="seperator">:</li>
+		    <li> <span class="minutes">00</span></li>
+		    <!--
+		    <li class="seperator">:</li>
+		    <li> <span class="seconds">00</span> </li>
+		    -->
+		</ul>		
+	    </div>
+	</li>
+    
+  
+</ul>
+
+	    
+	</div>
+    </div>
+</div>
+
+</div>
+
+    </div>
+  
+
+	</div>
+
+
+	<!-- Add here all underscore templates -->
+	<script type="text/template" id="simple-list"> <ul>
+  {% _.each(data,function(el) { %}
+  <li>{{el}}</li>
+  {% }); %}
+</ul>
+</script><script type="text/template" id="lista-apuntes"> {% _.each(data, function(a) { var c = drender.getvar(a); %}
+<div class="col-sm-6 media apuntes" data-var="{{a}}">
+    <div class="pull-left">
+	<a href="#" class="pull-left">
+	    <img src="{{ c.img }}" class="media-object"/>
+	</a>
+    </div>
+    <div class="media-body pull-left">
+	<h4 class="media-heading">
+	    {{c.nombre}} 
+	</h4>
+	<div>{{c.tamano}} | {{c.fecha}}</div>
+    </div>
+    <div class="pull-right btn-group" role="group">
+	<button type="button" class="btn btn-default btn-save">
+	    <span class="glyphicon glyphicon-heart"></span>
+	</button>
+	<button type="button" class="btn btn-default">
+	    <span class="glyphicon glyphicon-download-alt"></span>
+	</button>
+    </div>
+</div>
+{% }); %}
+</script><script type="text/template" id="lista-dudas"> {% _.each(data, function(a) { var c = drender.getvar(a); %}
+<div class="col-sm-6 media dudas" data-var="{{a}}">
+    <div class="pull-left">
+	<a href="#" class="pull-left">
+	    <img src="{{ c.img }}" class="media-object"/>
+	</a>
+    </div>
+    <div class="media-body pull-left">
+	<h4 class="media-heading">
+	    {{c.nombre}} 
+	</h4>
+	<div class="text-muted">{{c.autor}} | {{c.fecha}} | {{c.respuestas.length}} respuestas</div>
+    </div>
+    <div class="pull-right btn-group" role="group">
+	<button type="button" class="btn btn-default btn-save">
+	    <span class="glyphicon glyphicon-heart"></span>
+	</button>
+	<button type="button" class="btn btn-default">
+	    <span class="glyphicon glyphicon-download-alt"></span>
+	</button>
+    </div>
+</div>
+{% }); %}
+</script>
+
+	<script src="/static/js/vendor/jquery-1.10.1.js"></script>
+	<script src="/static/js/vendor/bootstrap.js"></script>
+	<script src="/static/js/vendor/underscore.js"></script>
+	<script src="/static/js/vendor/zabuto_calendar.min.js"></script>
+	<script src="/static/js/vendor/bootstrap-select.js"></script>
+	<script src="/static/js/vendor/jquery.downCount.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+	<script src="/static/js/vendor/bootstrap-list-filter.src.js"></script>
+	<script src="/static/js/vendor/bootstrap-growl.js"></script>
+	<script src="/static/js/vendor/jquery.slimscroll.min.js"></script>
+
+	<script src="/static/js/main.js"></script>
+
+    </body>
+
+    
+    
+
+</html>

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% comment %}
+
+@param asignatura.nombre
+@param asignatura.siglas
+@param asignatura.menu(lista de {'url':,'nombre':})
+{% endcomment %}
+ 
+{% block title %}{% with asignatura=data.notifications.asignaturas.0 %}[{{asignatura.siglas}}] {{asignatura.nombre}} {% endwith %}{% endblock %}
+{% block body %}
+
+  {% comment %}TODO: sustuir 0 por el nombre de la variable indice{% endcomment %}
+  
+  {% with asignatura=data.notifications.asignaturas.0 %}
+    
+    
+    <div class="jumbotron">
+      <h1>{{asignatura.nombre}}</h1>
+    </div>
+
+    <ul class="nav nav-tabs menu-nav">
+      {% for m in asignatura.menu %}
+	<li role="presentation" id="main_{{m.id}}"
+	    class="{% if_current_page m.url 'active' ''%}" >
+	  <a href="{% url m.url%}">{{ m.nombre | safe }}</a>
+	</li>
+      {% endfor %} 
+    </ul>
+
+    <div class="tabs-main">
+      {% block tab_main %}
+      {% endblock  %}
+    </div>
+  {% endwith %}
+{% endblock %}

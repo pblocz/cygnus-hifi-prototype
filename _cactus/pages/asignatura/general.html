@@ -1,0 +1,28 @@
+{% extends 'asignatura.djhtml' %}
+
+{% block tab_main %}
+<div class="row">
+    <div class="col-sm-6">
+	<dl class="dl-horizontal">
+	    <dt>Profesor</dt>
+	    <dd>{{asignatura.profesor}}</dd>
+	    <dt>Tutoria</dt>
+	    <dd>
+		<ul class="list-unstyled">
+		    {%for e in asignatura.tutorias %} 
+		    <li>{{e}}</li>
+		    {% endfor %}
+		</ul>
+	    </dd>
+	    <dt>Descripción</dt>
+	    <dd>{{asignatura.descripcion}}</dd>
+	</dl>
+    </div>
+
+    {% include "panel.djhtml" with title="Apuntes" elements=asignatura.data.apuntes template="panel/apuntes.djhtml" variable="notifications.asignaturas.0.data.apuntes"%}		
+
+    {% include "panel.djhtml" with title="Dudas" elements=asignatura.data.dudas template="panel/dudas.djhtml" %}
+
+    {% include "panel.djhtml" with title="Entregas" elements=asignatura.data.entregas template="panel/entregas.djhtml" %}
+</div>
+{% endblock %}

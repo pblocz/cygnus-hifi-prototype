@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% comment %}
+
+@param asignatura.nombre
+@param asignatura.siglas
+@param asignatura.menu(lista de {'url':,'nombre':})
+{% endcomment %}
+
+{% block title %}
+    {{data.notifications.usuario.nombre}}
+    {{data.notifications.usuario.apellidos}}
+{% endblock %}
+
+{% block body %} {% with alumno=data.notifications.usuario %}
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="profile">
+                <div class="profile-image">
+                    <img src="{% static alumno.image %}"/>
+                </div>
+                <div class="profile-info">
+                    <div class="profile-name">
+                        <span class="drender name editable"
+                              data-var="notifications.usuario.nombre"></span>
+                        <span class="drender surname editable"
+                              data-var="notifications.usuario.apellidos"></span>
+                    </div>
+                    <div class="profile-element">
+                        Curso {{alumno.curso}}
+                    </div>
+                    <div class="profile-element">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                        <span class="drender editable" data-var ="notifications.usuario.correo"></span>
+                    </div>
+                    <div class="profile-element">
+                        <span class="glyphicon glyphicon-phone"></span>
+			<span class="drender editable" data-var ="notifications.usuario.telefono"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <ul class="nav nav-tabs menu-nav">
+	        {% for m in alumno.perfil.menu %}
+		    <li role="presentation"
+		        class="{% if_current_page m.url 'active' ''%}" >
+		        <a href="{% url m.url%}">{{ m.nombre | safe }}</a>
+		    </li>
+	        {% endfor %}
+	    </ul>
+	    <div class="profile-main tabs-main">
+		{% block profile-main %}{% endblock %}
+	    </div>
+        </div>
+    </div>
+{% endwith %}{% endblock %}
