@@ -228,6 +228,14 @@ $(function(){
 	    height: "auto",
 	});
     });
+
+    // alert dismissing
+    $('.drender .alert').on('closed.bs.alert', function() {
+	drender.setvar(
+	    $(this).closest('.drender').data('var')+".printed",
+	    true
+	);
+    });
 });
 
 
