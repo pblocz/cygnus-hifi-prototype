@@ -1,0 +1,143 @@
+<div class="chat-window col-xs-5 col-md-4 col-lg-3" id="chat_window_1">
+    <div class="col-xs-12 col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading top-bar">
+                <div class="col-md-8 col-xs-8">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-comment"></span> Contactos</h3>
+                </div>
+                <div class="col-md-4 col-xs-4" style="text-align: right;">
+                    <a href="#"><span id="minim_chat_window" class="glyphicon glyphicon-plus panel-collapsed icon_minim"></span></a>
+		    <!-- <a href="#"><span class="glyphicon glyphicon-remove icon_close" data-id="chat_window_1"></span></a> -->
+                </div>
+            </div> <!-- .top-bar -->
+
+	    <div class="panel-body-footer" style="display: none;">
+		<div class="panel-body msg_container_base">
+                    <ul class="nav nav-tabs" role="tablist" id="myTab">
+			<li role="presentation" class="active">
+			    <a href="#todos" aria-controls="todos" role="tab" data-toggle="tab">Todos</a></li>
+			<li role="presentation">
+			    <a href="#profesores" aria-controls="profesores" role="tab" data-toggle="tab">Profesores</a></li>
+			<li role="presentation">
+			    <a href="#asignaturas" aria-controls="asignaturas" role="tab" data-toggle="tab">Asignaturas</a></li>
+		    </ul>
+
+		    <div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="todos">
+			    {% for i in CACTUS.pages %}
+
+			    <a href="javascript:void(0)" class="contact-wrapper">
+				<div class="media contact">
+				    <div class="pull-left">
+					<img class="contact-image media-object" src="{% static "/static/images/40x40.gif" %}"/>
+				    </div>
+				    <div class="contact-name media-body clearfix">
+					<span>Rodolfo asdfasfd</span>
+				    </div>
+				</div> <!-- .contact -->
+			    </a> <!-- .contact-wrapper -->
+
+			    {% endfor %}
+
+			</div> <!-- #todo -->
+			<div role="tabpanel" class="tab-pane" id="profesores">
+			    {% for i in CACTUS.pages %}
+
+			    <a href="javascript:void(0)" class="contact-wrapper">
+				<div class="media contact">
+				    <div class="pull-left">
+					<img class="contact-image media-object" src="{% static "/static/images/40x40.gif" %}"/>
+				    </div>
+				    <div class="contact-name media-body clearfix">
+					<div>
+					    [DSI] Rodolfo asdfasfd
+					    <div class="text-muted">Diseño de Sistemas Interactivos</div>
+					</div>
+				    </div>
+				</div> <!-- .contact -->
+			    </a> <!-- .contact-wrapper -->
+
+			    {% endfor %}			    
+
+			</div> <!-- #profesores -->
+
+			<div role="tabpanel" class="tab-pane" id="asignaturas">
+
+			    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				<div class="panel contactos-asignatura panel-default">
+				    <div class="panel-heading" role="tab" id="headingOne">
+					<h4 class="panel-title">
+					    <a data-toggle="collapse" data-parent="#accordion" href="#dsi" aria-expanded="true" aria-controls="dsi">
+						[DSI] Diseño de Sistemas interactivos
+					    </a>
+					</h4>
+				    </div>
+				    <div id="dsi" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dsi">
+					<div class="panel-body">
+					    {% for i in CACTUS.pages %}
+
+						<a href="javascript:void(0)" class="contact-wrapper">
+						    <div class="media contact">
+							<div class="pull-left">
+							    <img class="contact-image media-object" src="{% static "/static/images/40x40.gif" %}"/>
+							</div>
+							<div class="contact-name media-body clearfix">
+							    <div> Rodolfo asdfasfd </div>
+							</div>
+						    </div> <!-- .contact -->
+						</a> <!-- .contact-wrapper -->
+
+					    {% endfor %}			    
+					</div> <!-- .panel-body -->
+				    </div>
+				</div>
+				<div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingTwo">
+					<h4 class="panel-title">
+					    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						Collapsible Group Item #2
+					    </a>
+					</h4>
+				    </div>
+				    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					<div class="panel-body">
+					    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					</div>
+				    </div>
+				</div>
+				<div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingThree">
+					<h4 class="panel-title">
+					    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						Collapsible Group Item #3
+					    </a>
+					</h4>
+				    </div>
+				    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+					<div class="panel-body">
+					    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					</div>
+				    </div>
+				</div>
+			    </div>
+			    
+			</div> <!-- #asignaturas -->
+		    </div>
+
+
+		</div> <!-- .msg_container -->
+
+		<div class="panel-footer">
+                    <div class="input-group">
+			<input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Write your message here..." />
+			<span class="input-group-btn">
+                            <button class="btn btn-primary btn-sm" id="btn-chat">
+				<span class="glyphicon glyphicon-search"></span>
+			    </button>
+			</span>
+                    </div>
+		</div> 
+	    </div> <!-- .panel-body-footer -->
+    	</div>
+    </div>
+</div>
