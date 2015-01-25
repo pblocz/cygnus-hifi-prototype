@@ -1,9 +1,13 @@
+{# -*- engine:django -*- #}
 {% extends 'asignatura.djhtml' %}
+
+{% block body-class %}extras{% endblock %}
 
 {% block tab_main %}
 
 <div class="row">
-<div class="alert alert-info col-sm-10 col-sm-offset-1" role="alert">En esta secci&oacute;n puedes compartir material con tus compañeros!</div>
+    <div class="drender" data-var="notifications.asignaturas.0.menu-alert.extra" data-template="alert"></div>
+
 <div class="col-lg-6">
     <div class="input-group search-input">
       <input type="text" class="form-control" placeholder="Search for...">
