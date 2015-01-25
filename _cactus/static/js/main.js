@@ -68,7 +68,9 @@ var drender = (function(doc,win,$){
 
     // Data getters and setters for global app data
     ret.getvar = function(s){ return byString(GET_PARAMETERS,DATA,s)[0]; }
-    ret.setvar = function(s,v) {
+    ret.setvar = function(s,v, options) { 
+	options = _.extend({rerender: true},options);
+
         var c = _.isFunction(v) ? v : function() { return v; }
         var vars = byString(DATA,s);
 
@@ -78,9 +80,10 @@ var drender = (function(doc,win,$){
         DATA_J = JSON.stringify(DATA);
         win.localStorage.APP_DATA = DATA_J;
 
-
-        // rerender any element with the variable
-        ret.drender("[data-var='"+s+"']");
+	if(options.rerender === true) {
+            // rerender any element with the variable
+            ret.drender("[data-var='"+s+"']");
+	}
 
         return ret;
     }
@@ -181,59 +184,39 @@ $(function(){
 	});
 
 
-    // apuntes like and unlike
-    $('.media.apuntes .btn-save').click(function(){
-	var v = $(this).closest('.media').data('var');
-	$(this).toggleClass('saved');
-	var save = $(this).hasClass('saved');
+    function likegen(what,titlekey) {
+	// apuntes like and unlike
+	$('.media.'+what+' .btn-save').click(function(){
+	    var v = $(this).closest('.media').data('var');
+	    $(this).toggleClass('saved');
+	    var save = $(this).hasClass('saved');
 
-	if(save) {
-	    drender.setvar('notifications.usuario.perfil.apuntes', 
-			   function(a){ a.push(v); return a; });
-	} else {
-	    drender.setvar('notifications.usuario.perfil.apuntes', 
-			   function(a){ return a.filter(
-			       function(el) { return el!=v;}); });
-	}
-	
-	// notify the changes
-	var text=(save ? 
-	 "Guardado <a href='#'>{0}</a> en tu perfil" : 
-	 "Eliminado <a href='#'>{0}</a> de tu perfil")
-	    .replace('{0}', drender.getvar(v+".nombre"));
-	$.growl(text);
-    }).each(function() {
-	var saved = drender.getvar('notifications.usuario.perfil.apuntes');
-	$(this).toggleClass('saved',
-                  _.contains( saved,$(this).closest('.media').data('var')));
-    });
+	    if(save) {
+		drender.setvar('notifications.usuario.perfil.'+what, 
+			       function(a){ a.push(v); return a; },
+			       {rerender:false});
+	    } else {
+		drender.setvar('notifications.usuario.perfil.'+what, 
+			       function(a){ return a.filter(
+				   function(el) { return el!=v;}); },
+			       {rerender:false});
+	    }
+	    
+	    // notify the changes
+	    var text=(save ? 
+		      "Guardado <a href='#'>{0}</a> en tu perfil" : 
+		      "Eliminado <a href='#'>{0}</a> de tu perfil")
+		.replace('{0}', drender.getvar(v+"."+titlekey));
+	    $.growl(text);
+	}).each(function() {
+	    var saved = drender.getvar('notifications.usuario.perfil.'+what);
+	    $(this).toggleClass('saved',
+		_.contains( saved,$(this).closest('.media').data('var')));
+	});
+    }
 
- // dudas like and unlike
-    $('.media.dudas .btn-save').click(function(){
-	var v = $(this).closest('.media').data('var');
-	$(this).toggleClass('saved');
-	var save = $(this).hasClass('saved');
-
-	if(save) {
-	    drender.setvar('notifications.usuario.perfil.dudas', 
-			   function(a){ a.push(v); return a; });
-	} else {
-	    drender.setvar('notifications.usuario.perfil.dudas', 
-			   function(a){ return a.filter(
-			       function(el) { return el!=v;}); });
-	}
-	
-	// notify the changes
-	var text=(save ? 
-	 "Guardado <a href='#'>{0}</a> en tu perfil" : 
-	 "Eliminado <a href='#'>{0}</a> de tu perfil")
-	    .replace('{0}', drender.getvar(v+".titulo"));
-	$.growl(text);
-    }).each(function() {
-	var saved = drender.getvar('notifications.usuario.perfil.dudas');
-	$(this).toggleClass('saved',
-                  _.contains( saved,$(this).closest('.media').data('var')));
-    });
+    likegen("apuntes","nombre");
+    likegen("dudas","titulo");
 
 
 
