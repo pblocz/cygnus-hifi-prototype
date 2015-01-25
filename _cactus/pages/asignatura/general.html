@@ -1,3 +1,4 @@
+{# -*- engine:django -*- #}
 {% extends 'asignatura.djhtml' %}
 
 {% block tab_main %}
@@ -21,7 +22,7 @@
 
     {% include "panel.djhtml" with title="Apuntes" elements=asignatura.data.apuntes template="panel/apuntes.djhtml" variable="notifications.asignaturas.0.data.apuntes"%}		
 
-    {% include "panel.djhtml" with title="Dudas" elements=asignatura.data.dudas template="panel/dudas.djhtml" %}
+    {% include "panel.djhtml" with title="Dudas" elements=asignatura.data.dudas template="panel/dudas.djhtml" variable="notifications.asignaturas.0.data.dudas"%}
 
     {% include "panel.djhtml" with title="Entregas" elements=asignatura.data.entregas template="panel/entregas.djhtml" %}
 </div>

@@ -36,7 +36,6 @@ var drender = (function(doc,win,$){
      */
     function byString() {
 	var s = _.last(arguments), ob = _.initial(arguments);
-	console.log("s before {}:", s);
 
         // transform, {var} to its var, for example array[{var}] to access array indirectly
         s = s.replace(/\{([^}]+)\}/g, function(match, gr1, offset, string) {
@@ -45,7 +44,6 @@ var drender = (function(doc,win,$){
 		if(r!=undefined) return r[0];
 	    }
         });
-	console.log("s after {}:", s);
 
         s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
         s = s.replace(/^\./, '');           // strip a leading dot
@@ -63,6 +61,17 @@ var drender = (function(doc,win,$){
             }
             if(!a.length) return [o,prev_o,prev_idx];
 	}
+    }
+
+    function canonicalVar(s) {
+	var ob= [GET_PARAMETERS,DATA]
+	s = s.replace(/\{([^}]+)\}/g, function(match, gr1, offset, string) {
+	    for(var i=0; i<ob.length; i++) {
+		var r = byString(ob[i],gr1); 
+		if(r!=undefined) return r[0];
+	    }
+        });
+	return s;
     }
 
 
@@ -99,6 +108,7 @@ var drender = (function(doc,win,$){
         var template = templates.filter('#'+template).eq(0).text();
         return _.template(template)({
 	    "data":ret.getvar(variable),
+	    "data_var" : canonicalVar(variable),
 	    "static": function(url) { return (DATA.site_prefix + url); },
 	    "url": function(url) { return (DATA.site_prefix + url); },
 	});

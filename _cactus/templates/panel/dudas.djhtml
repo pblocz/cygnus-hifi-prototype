@@ -1,7 +1,11 @@
+{% comment %}
+content
+variable
+{% endcomment %}
+
 <ul class="media-list">
-  {% if  c|length > 0 %}
     {% for c in content %}
-	<li class="media-middle media">
+	<li class="media-middle media dudas" data-var="{{variable}}.{{forloop.counter0}}">
 	    <div class="pull-left">
 		<a href="#" class="pull-left">
 		    <img src="{% static c.img %}" class="media-object"/>
@@ -9,16 +13,16 @@
 	    </div>
 	    <div class="media-body pull-left">
 		<h4 class="media-heading">
-		  <a href="#" > {{c.titulo}}</a>
+		    <a href="#" > {{c.titulo}}</a>
 		</h4>
-		<ul class="list-unstyled bar-sep">
+		<ul class="list-unstyled bar-sep text-muted">
 		    <li>{{c.autor}}</li>
 		    <li>{{c.fecha}}</li>
 		    <li>{{c.respuestas|length}} respuestas</li>
 		</ul>
 	    </div>
 	    <div class="pull-right btn-group" role="group">
-		<button type="button" class="btn btn-default">
+		<button type="button" class="btn btn-default btn-save">
 		    <span class="glyphicon glyphicon-heart"></span>
 		</button>
 		<button type="button" class="btn btn-default">
@@ -28,7 +32,5 @@
 	    </div>
 	</li>
     {% endfor %}
-  {% else %}
 
-  {% endif %}
 </ul>
