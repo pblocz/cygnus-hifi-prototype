@@ -16,6 +16,20 @@
     perfil:
       apuntes: []
       dudas: []
+      menu-alert:
+        asignaturas: 
+          text: "Aquí estan todas las asignaturas y cursos de este año y los anteriores!"
+          printed: false
+        apuntes: 
+          text: "En esta sección encontrarás los apuntes que te hayas guardado!"
+          printed: false
+        entregas: 
+          text: "Aquí tienes todas las entregas de todas las asignaturas juntas!"
+          printed: false
+        dudas: 
+          text: "En esta sección encontrarás las dudas que has guardado!"
+          printed: false
+
       menu:
         - url: "/perfil/asignaturas.html"
           nombre: "<span class='glyphicon glyphicon-book'></span> Asignaturas"
@@ -62,6 +76,10 @@
       tutorias:
         - "L,M 10:30"
         - "J,V 12:30"
+      menu-alert:
+        extra: 
+          text: "En esta secci&oacute;n puedes compartir material con tus compañeros!"
+          printed: false
       menu:
         -
           url: "/asignatura/general.html"
