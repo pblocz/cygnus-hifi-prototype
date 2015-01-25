@@ -36,14 +36,16 @@ var drender = (function(doc,win,$){
      */
     function byString() {
 	var s = _.last(arguments), ob = _.initial(arguments);
+	console.log("s before {}:", s);
 
         // transform, {var} to its var, for example array[{var}] to access array indirectly
         s = s.replace(/\{([^}]+)\}/g, function(match, gr1, offset, string) {
 	    for(var i=0; i<ob.length; i++) {
 		var r = byString(ob[i],gr1); 
-		if(r!=undefined) return r;
+		if(r!=undefined) return r[0];
 	    }
         });
+	console.log("s after {}:", s);
 
         s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
         s = s.replace(/^\./, '');           // strip a leading dot
