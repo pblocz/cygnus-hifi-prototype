@@ -56,7 +56,7 @@
       url: "/asignatura/problemas.html"
     - titulo: "Nueva Respuesta en tu duda"
       fecha: "2015-01-11 10:11"
-      url: "/asignatura/dudas/details.html"
+      url: "/asignatura/dudas_details.html"
   calendario:
     -
       fecha: "2015-01-11 10:11"
@@ -76,6 +76,7 @@
       tutorias:
         - "L,M 10:30"
         - "J,V 12:30"
+      year: "2014/15"
       menu-alert:
         extra: 
           text: "En esta secci&oacute;n puedes compartir material con tus compañeros!"
