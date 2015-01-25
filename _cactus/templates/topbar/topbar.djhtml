@@ -26,7 +26,7 @@
 		    <ul class="dropdown-menu">
 			{% for m in data.notifications.usuario.perfil.menu %}
 			    <li class="{% if_current_page m.url 'active' '' %}">
-				<a href="{{m.url}}">{{m.nombre | safe}}</a>
+				<a href="{% url m.url %}">{{m.nombre | safe}}</a>
 			    </li>
 			{% endfor %}
 		    </ul>			
