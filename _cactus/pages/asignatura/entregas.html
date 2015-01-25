@@ -17,10 +17,18 @@
  <div class="col-md-6 media">
 		    <div class="media-body pull-left">
 			<h4 class="media-heading">
-			    {{c.titulo}} 
+			  <a href="/asignatura/entregas_details.html?entrega={{forloop.counter0}}"> {{c.titulo}} </a>
 			</h4>
 			<div class="text-muted"> 
-			    {{c.fecha | make_list | slice:":10" | join:"" }} | {{c.autor}}
+			    {{c.fecha | make_list | slice:":10" | join:"" }}
+			</div>
+			<div class="pull-left">
+		
+			  <span class="input-group-btn">
+			    <button class="btn btn-default" type="button">
+			      <span class="glyphicon glyphicon-upload"></span>
+			    </button>
+			  </span>
 			</div>
 		    </div>
 		    <div class="pull-right">
