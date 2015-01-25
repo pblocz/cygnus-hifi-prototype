@@ -7,7 +7,7 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	    </button>
-	    <a class="navbar-brand" href="{% url "/index.html" %}">Project name</a>
+	    <a class="navbar-brand" href="{% url "/perfil/asignaturas.html" %}">Project name</a>
 	</div> <!-- .nav-header -->
 
 
@@ -20,7 +20,7 @@
 	    <ul class="nav navbar-nav navbar-right">
 		<li class="dropdown user-navbar">
 		    <a href="{% url '/perfil/index.html' %}" 
-		       class="{% if_current_page '/perfil/index.html' 'active' '' %} dropdown-toggle disabled" data-toggle="dropdown">
+		       class="{% if_current_page '/perfil/asignaturas.html' 'active' '' %} dropdown-toggle disabled" data-toggle="dropdown">
 			<img src="{% static "/static/images/40x40.gif" %}" class="profile-image img-circle"> Username <b class="caret"></b>
 		    </a>
 		    <ul class="dropdown-menu">

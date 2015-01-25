@@ -19,13 +19,13 @@
  {% for c in asignatura.data.dudas %}
 	<div class="col-sm-6 media dudas" data-var="notifications.asignaturas.0.data.dudas.{{forloop.counter0}}">
 	    <div class="pull-left">
-		<a href="#" class="pull-left">
+		<a href="/asignatura/dudas_details.html" class="pull-left">
 		    <img src="{% static c.img %}" class="media-object"/>
 		</a>
 	    </div>
 	    <div class="media-body pull-left">
 		<h4 class="media-heading">
-		  <a href="#"> {{c.titulo}} </a>
+		  <a href="/asignatura/dudas_details.html"> {{c.titulo}} </a>
 		</h4>
 		<div class="text-muted">
 		    {{c.autor}} | {{c.fecha}} | {{c.respuestas|length}} respuestas
