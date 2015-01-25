@@ -25,38 +25,49 @@ var drender = (function(doc,win,$){
     var DATA_J = "APP_DATA" in win.localStorage ? win.localStorage.APP_DATA : null,
         DATA = DATA_J ? JSON.parse(DATA_J) : win.APP_DATA;
 
-
+    // this parses get parameters
+    var GET_PARAMETERS = _.object(_.compact(_.map(win.location.search.slice(1).split('&'), function(item) {  if (item) return item.split('='); })));
+    
     /**
        Retrieves a value from o from a dot-string, an element as you would access it.
        - prop1.prop2 --> usual access with .
        - prop1[integer] --> array access
        - prop1[{dot-string}] --> uses dot-string as an index (fetch its value first) for prop1
      */
-    function byString(o, s) {
-        // transfor, {var} to its var, for example array[{var}] to access array indirectly
+    function byString() {
+	var s = _.last(arguments), ob = _.initial(arguments);
+	console.log("s before {}:", s);
+
+        // transform, {var} to its var, for example array[{var}] to access array indirectly
         s = s.replace(/\{([^}]+)\}/g, function(match, gr1, offset, string) {
-            return byString(o,gr1)[0];
+	    for(var i=0; i<ob.length; i++) {
+		var r = byString(ob[i],gr1); 
+		if(r!=undefined) return r[0];
+	    }
         });
+	console.log("s after {}:", s);
 
         s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
         s = s.replace(/^\./, '');           // strip a leading dot
-        var a = s.split('.'), prev_o = null, prev_idx= null;
-        while (a.length) {
-            var n = a.shift();
-            if (n in o) {
-                prev_o = o;
-                prev_idx = n;
-                o = o[n];
-            } else {
-                return;
+	
+	for(var i=0; i<ob.length; i++) {
+	    var o=ob[i];
+            var a = s.split('.'), prev_o = null, prev_idx= null;
+            while (a.length) {
+		var n = a.shift();
+		if (n in o) {
+                    prev_o = o;
+                    prev_idx = n;
+                    o = o[n];
+		} else break;
             }
-        }
-        return [o,prev_o,prev_idx];
+            if(!a.length) return [o,prev_o,prev_idx];
+	}
     }
 
 
     // Data getters and setters for global app data
-    ret.getvar = function(s){ return byString(DATA,s)[0]; }
+    ret.getvar = function(s){ return byString(GET_PARAMETERS,DATA,s)[0]; }
     ret.setvar = function(s,v) {
         var c = _.isFunction(v) ? v : function() { return v; }
         var vars = byString(DATA,s);
@@ -83,7 +94,11 @@ var drender = (function(doc,win,$){
     /** renders a template (given by its id) using variable data **/
     ret.render_template = function(template,variable) {
         var template = templates.filter('#'+template).eq(0).text();
-        return _.template(template)({"data":ret.getvar(variable)});
+        return _.template(template)({
+	    "data":ret.getvar(variable),
+	    "static": function(url) { return (DATA.site_prefix + url); },
+	    "url": function(url) { return (DATA.site_prefix + url); },
+	});
     }
 
 

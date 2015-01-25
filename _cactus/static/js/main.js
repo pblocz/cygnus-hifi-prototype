@@ -94,7 +94,11 @@ var drender = (function(doc,win,$){
     /** renders a template (given by its id) using variable data **/
     ret.render_template = function(template,variable) {
         var template = templates.filter('#'+template).eq(0).text();
-        return _.template(template)({"data":ret.getvar(variable)});
+        return _.template(template)({
+	    "data":ret.getvar(variable),
+	    "static": function(url) { return (DATA.site_prefix + url); },
+	    "url": function(url) { return (DATA.site_prefix + url); },
+	});
     }
 
 

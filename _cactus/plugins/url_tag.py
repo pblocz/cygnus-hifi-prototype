@@ -81,3 +81,9 @@ def url(context, link_url):
 # print "registering tags"
 register.simple_tag(takes_context=True)(static)
 register.simple_tag(takes_context=True)(url)
+
+
+# export site-url prefix
+def preBuildPage(site,page,context,data):
+    context['site_url'] = site.url;
+    return context,data
