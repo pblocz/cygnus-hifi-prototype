@@ -32,6 +32,7 @@
 			    <a href="#">{{c.titulo}} </a>
 			</h4>
 
+<<<<<<< HEAD
 			<ul class="list-unstyled bar-sep">
 			    <li>{{c.autor}} | {{c.fecha}} | {{c.respuestas|length}} respuestas</li>
 			</ul>
@@ -40,6 +41,23 @@
 		<div class="pregunta-body">
 		    {{c.preg}}
 		</div>
+=======
+  <div class="col-sm-10 col-sm-offset-1 media media-middle">
+    <div class="pull-left">
+      <a href="#" class="pull-left">
+	<img src="{% static c.img %}" class="media-object"/>
+      </a>
+    </div>
+    <div class="media-body pull-left col-sm-8">
+      <div class="pull-right btn-group" role="group">
+	<button type="button" class="btn btn-default">
+	  <span class="glyphicon glyphicon-heart"></span>
+	</button>
+      </div>
+      <h4 class="media-heading">
+	<b>{{c.titulo}} </b>
+      </h4>
+>>>>>>> fc7b2f1b59e25f18079619424ae54c3d0ea1022f
 
 	    </div> <!-- .pregunta -->
 	    
@@ -53,6 +71,7 @@
 			    </a>
 			</div> <!-- .col-sm-1 -->
 
+<<<<<<< HEAD
 			<div class="media-body pull-left col-sm-11">
 			    <div class="pull-right btn-group" role="group">
 				<button type="button" class="btn btn-default">
@@ -62,6 +81,11 @@
 				    <span class="glyphicon glyphicon-hand-down"></span>
 				</button> 
 			    </div> <!-- .btn-group -->		
+=======
+      <h4 class="media-heading">
+	<b>{{m.autor}} </b>
+      </h4>
+>>>>>>> fc7b2f1b59e25f18079619424ae54c3d0ea1022f
 
 			    <h4 class="media-heading">
 				<a href="#">{{m.autor}} </a>
