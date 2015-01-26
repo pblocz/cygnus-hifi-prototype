@@ -29,6 +29,9 @@
         dudas: 
           text: "En esta sección encontrarás las dudas que has guardado!"
           printed: false
+        compartido: 
+          text: "En esta secci&oacute;n puedes compartir material con tus compañeros!"
+          printed: false
 
       menu:
         - url: "/perfil/asignaturas.html"
@@ -237,15 +240,19 @@
                 resp: "esta claro que si lo sabia"
                 nuevo: "false"
         entregas:
-          -
-            titulo: "Practica 10"
+          - titulo: "Practica 10"
             fecha: "10/02/2015 08:00:00"
-            autor: "Juan luís"
-          -
-            titulo: "Practica 1"
+            entregada: false
+            file: ""
+            nota: ""
+          - titulo: "Practica 1"
             fecha: "01/02/2015 05:00:00"
-            autor: "Juan luís"
-
+            entregada: false
+            file: ""
+            nota: ""
           - titulo: "Practica 0"
             fecha: "02/10/2014 05:00:00"
-            autor: "Juan luís"
+            entregada: true
+            file: "P0_yo.tar.gz"
+            nota: "9/10"
+            comentario: "Casi perfecta, pasate por mi despacho para comentar el error."
