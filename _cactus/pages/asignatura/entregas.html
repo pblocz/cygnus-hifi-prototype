@@ -17,29 +17,90 @@
  <div class="col-md-6 media">
 		    <div class="media-body col-md-6">
 			<h4 class="media-heading">
-			  <a href="/asignatura/entregas_details.html?entrega={{forloop.counter0}}"> {{c.titulo}} </a>
+			  <a href="#" data-toggle="modal" data-target="#mmodal{{forloop.counter0}}"> {{c.titulo}} </a>
 			</h4>
 			<div class="text-muted"> 
 			    {{c.fecha | make_list | slice:":10" | join:"" }}
 			</div>
 
 		    </div>
-		    <div class="pull-right col-md-4"><div>
+		    <div class="pull-right col-md-4">
+		      <div class="clearfix">
 			<ul class="countdown list-inline" data-date="{{c.fecha}}">
 			    <li class="day"> <span class="days">00</span></li>
 			    <li class="seperator">d</li>
 			    <li> <span class="hours">00</span></li>
 			    <li class="seperator">:</li>
 			    <li> <span class="minutes">00</span></li>
-			</ul>	</div>
-	<div>
+			</ul>	
+		      </div><div>
 			<span class="input-group-btn">
-			    <button class="btn btn-default" type="button">
-			      <span class="glyphicon glyphicon-open"></span>
+			    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#mmodal{{forloop.counter0}}">
+			      <span class="glyphicon glyphicon-open {% if c.entregada %} text-muted{% endif %}"></span>
 			    </button>
-			</span></div>
+			  </span>
+		      </div>
 		    </div>
 		</div> 
+
+<!-- Modal -->
+<div class="modal fade" id="mmodal{{forloop.counter0}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{c.titulo}}</h4>
+
+      </div>
+      <div class="modal-body">
+	<div class="text-muted clearfix"> 
+	  
+	  <div class="fechisima pull-left col-md-6">  {{c.fecha | make_list | slice:":10" | join:"" }}</div>	
+          <ul class="countdown list-inline pull-right" data-date="{{c.fecha}}">
+	    <li>Tiempo restante:&nbsp;</li>
+	    <li class="day"> <span class="days">00</span></li>
+	    <li class="seperator">d</li>
+	    <li> <span class="hours">00</span></li>
+	    <li class="seperator">:</li>
+	    <li> <span class="minutes">00</span></li> 
+	    <li class="seperator">:</li>
+	    <li> <span class="seconds">00</span></li>
+	  </ul>
+	</div>	
+	<div class="media-body">
+	  {{c.desc}}
+	</div> 
+	<div class="divider">&nbsp;</div>
+	{% if c.entregada %}
+	<div class="media-body">
+	  <span>Archivos subidos:</span>
+	  <ul>
+	    <li><a href="#">{{c.file}}</a></li>
+	  </ul>
+	  <br/>
+	  <h3>Nota: {{c.nota}}</h3>
+	  <h3>Comentario del profesor:</h3>
+	  <span>{{c.comentario}}</span>
+	  
+	</div> 
+	{% else %}
+	<div class="media-body">
+	  <label name=MAX_FILE_SIZE>Tamaño máximo: 5 MB </label>
+          <INPUT class="btn" type=file name="nom_del_archivo">
+	  <label class="text-muted plus-file">+ Añadir otro archivo</label>
+	  <br/>
+          <INPUT class="btn btn-primary" type=submit value="Enviar">
+	  
+	</div> 	
+	{% endif %}
+      </div>
+      <div class="modal-footer">
+	<a href="{% url '/asignatura/dudas.html'%}"type="button" class="btn btn-default">Dudas</a>
+	<a type="button" class="btn btn-primary">Enunciado</a>
+      </div>
+    </div>
+  </div>
+</div>
     {% endfor %}
 
 

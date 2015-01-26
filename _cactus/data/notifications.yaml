@@ -243,13 +243,16 @@
             entregada: false
             file: ""
             nota: ""
+            desc: "Esta practica consiste en blabla bla bla bla bla."
           - titulo: "Practica 1"
             fecha: "01/02/2015 05:00:00"
             entregada: false
             file: ""
             nota: ""
+            desc: "Esta practica consiste en blabla bla bla bla bla."
           - titulo: "Practica 0"
             fecha: "02/10/2014 05:00:00"
+            desc: "Esta practica consiste en blabla bla bla bla bla."
             entregada: true
             file: "P0_yo.tar.gz"
             nota: "9/10"
