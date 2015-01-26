@@ -1,0 +1,59 @@
+{% extends 'perfil.djhtml' %}
+
+{% block profile-main %}
+
+
+<div class="row">
+
+  <div class="col-sm-6 col-sm-offset-3 media">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <!-- Default panel contents -->
+      {% for a in data.notifications.asignaturas %}
+
+
+      <div class="panel panel-default">
+	<div class="panel-heading" role="tab" id="heading{{forloop.counter0}}">
+	  <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{forloop.counter0}}" aria-expanded="true" aria-controls="collapse{{forloop.counter0}}">
+              {{a.nombre}} 
+            </a>
+	  </h4>
+	  <span>(Nota general: {{a.notageneral}})</span>
+	</div>
+	<div id="collapse{{forloop.counter0}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{forloop.counter0}}">
+	  <div class="panel-body">
+
+	    <!-- Table --> 
+	    <table class="table">
+	      <thead>
+		<th>Prueba</th>
+		<th>Nota / M&aacute;ximo</th>
+	      </thead>
+	      {% for c in a.data.notas %}
+	      
+
+	      <tr class="media-body">
+		<td>
+		  <h4 class="media-heading">
+		    {% if c.entrega %}
+		    <a href={{c.url}}>{{c.nombre}}</a>
+		    {% else %}
+		    {{c.nombre}}
+		    {% endif %}
+		  </h4>
+		</td>
+		<td>{{c.nota}} / {{c.max}}</td>
+	      </tr>
+	      
+	      {% endfor %}
+	    </table>
+	  </div>
+	</div>
+      </div>
+      
+      {% endfor %}
+    </div>
+  </div>
+</div>
+  {% endblock %}
+

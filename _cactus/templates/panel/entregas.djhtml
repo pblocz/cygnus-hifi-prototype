@@ -11,7 +11,7 @@
 		<h4 class="media-heading">
 		    {{c.titulo}} 
 		</h4>
-		<div>  {{c.fecha | make_list | slice:":10" | join:"" }} | {{c.autor}}</div>
+		<div>  {{c.fecha | make_list | slice:":10" | join:"" }}</div>
 	    </div>
 	    <div class="pull-right">
 		<ul class="countdown list-inline" data-date="{{c.fecha}}">

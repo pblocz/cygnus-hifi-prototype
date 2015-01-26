@@ -19,7 +19,7 @@
  {% for c in asignatura.data.dudas %}
 	<div class="col-sm-6 media dudas" data-var="notifications.asignaturas.0.data.dudas.{{forloop.counter0}}">
 	    <div class="pull-left">
-		<a href="/asignatura/dudas_details.html" class="pull-left">
+		<a href="/asignatura/dudas_details.html?duda_idx={{forloop.counter0}}" class="pull-left">
 		    <img src="{% static c.img %}" class="media-object"/>
 		</a>
 	    </div>

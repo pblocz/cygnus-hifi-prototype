@@ -2,10 +2,6 @@
   msgs: 1
   nots: 3
   evts: 2
-  actual:
-    asignatura: 0
-    duda: 0
-    entrega: 0
   usuario:
     nombre: "Alumno"
     apellidos: "Normal Normalez"
@@ -16,6 +12,7 @@
     perfil:
       apuntes: []
       dudas: []
+      extras: []
       menu-alert:
         asignaturas: 
           text: "Aquí estan todas las asignaturas y cursos de este año y los anteriores!"
@@ -74,6 +71,7 @@
   asignaturas:
     -
       nombre: "Analisis Numérico"
+      notageneral: 7.2
       siglas: "ANUM"
       profesor: "Maria Rosa Florencia"
       tutorias:
