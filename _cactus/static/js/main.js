@@ -225,9 +225,9 @@ $(function(){
 	});
     }
 
-    likegen("apuntes","nombre");
-    likegen("dudas","titulo");
-
+  likegen("apuntes","nombre");
+  likegen("dudas","titulo");
+  likegen("extras","nombre");
 
 
     // slimscroll para eventos

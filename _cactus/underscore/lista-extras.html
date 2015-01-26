@@ -1,29 +1,8 @@
-{# -*- engine:django -*- #}
-{% extends 'asignatura.djhtml' %}
-
-{% block body-class %}extras{% endblock %}
-
-{% block tab_main %}
-
-<div class="row">
-    <div class="drender" data-var="notifications.asignaturas.0.menu-alert.extra" data-template="alert"></div>
-
-<div class="col-lg-6">
-    <div class="input-group search-input">
-      <input type="text" class="form-control" placeholder="Search for...">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-      </span>
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
- </div>
-<div class="row media-nopadding filterable">
-
- {% for c in asignatura.data.extra %}
-	<div class="col-sm-6 media extras" data-var="notifications.asignaturas.0.data.extra.{{forloop.counter0}}">
+{% _.each(data, function(a) { var c = drender.getvar(a); %}
+	<div class="col-sm-6 media extras" data-var="{{a}}">
 	    <div class="pull-left">
 		<a href="#" class="pull-left">
-		    <img src="{% static c.img %}" class="media-object"/>
+		    <img src="{{ static(c.img) }}" class="media-object"/>
 		</a>
 	    </div>
 	    <div class="media-body pull-left">
@@ -48,8 +27,5 @@
 		</button>
 	    </div>
 	</div>
-    {% endfor %}
 
-
-</div>
-{% endblock %}
+{% }); %}
