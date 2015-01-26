@@ -85,12 +85,12 @@
 	    <ul class="nav navbar-nav navbar-right">
 		<li class="dropdown user-navbar">
 		    <a href="/dsi-prototype/perfil/index.html" 
-		       class="active dropdown-toggle disabled" data-toggle="dropdown">
+		       class=" dropdown-toggle disabled" data-toggle="dropdown">
 			<img src="/dsi-prototype/static/images/40x40.gif" class="profile-image img-circle"> Username <b class="caret"></b>
 		    </a>
 		    <ul class="dropdown-menu">
 			
-			    <li class="active">
+			    <li class="">
 				<a href="/dsi-prototype/perfil/asignaturas.html"><span class='glyphicon glyphicon-book'></span> Asignaturas</a>
 			    </li>
 			
@@ -110,7 +110,7 @@
 				<a href="/dsi-prototype/perfil/dudas.html"><span class='glyphicon glyphicon-question-sign'></span> Dudas</a>
 			    </li>
 			
-			    <li class="">
+			    <li class="active">
 				<a href="/dsi-prototype/perfil/calificaciones.html"><span class='glyphicon glyphicon-list-alt'></span> Calificaciones</a>
 			    </li>
 			
@@ -254,7 +254,7 @@
             <ul class="nav nav-tabs menu-nav">
 	        
 		    <li role="presentation"
-		        class="active" >
+		        class="" >
 		        <a href="/dsi-prototype/perfil/asignaturas.html"><span class='glyphicon glyphicon-book'></span> Asignaturas</a>
 		    </li>
 	        
@@ -279,43 +279,94 @@
 		    </li>
 	        
 		    <li role="presentation"
-		        class="" >
+		        class="active" >
 		        <a href="/dsi-prototype/perfil/calificaciones.html"><span class='glyphicon glyphicon-list-alt'></span> Calificaciones</a>
 		    </li>
 	        
 	    </ul>
 	    <div class="profile-main tabs-main">
 		
-    <div class="row">
-	    <div class="drender" data-var="notifications.usuario.perfil.menu-alert.asignaturas" data-template="alert"></div>
 
-	<div class="col-md-6 search-input">
-	    <div class="input-group">
-		<input type="text" class="form-control" placeholder="Search for...">
-		<span class="input-group-btn">
-		    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-		</span>
-	    </div><!-- /input-group -->
-	</div><!-- /.col-lg-6 -->
-    </div> <!-- /.row -->
 
-    <div class="entregas-content row media-nopadding filterable">
-	
-	    
-		<div class="col-md-6 media">
-		    <div class="media-body pull-left">
-			<h4 class="media-heading">
-			  <a href="/asignatura/general.html?asignatura_idx=0">[ANUM] Analisis Numérico (2014/15)</a>
-			</h4>
-			<div class="text-muted"> 
-			    Profesor: Maria Rosa Florencia
-			</div>
-		    </div>
-		</div>
-	    
+<div class="row">
+
+  <div class="col-sm-6 col-sm-offset-3 media">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <!-- Default panel contents -->
+      
+
+
+      <div class="panel panel-default">
+	<div class="panel-heading" role="tab" id="heading0">
+	  <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+              Analisis Numérico 
+            </a>
+	  </h4>
+	  <span>(Nota general: 7.2)</span>
+	</div>
+	<div id="collapse0" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading0">
+	  <div class="panel-body">
+
+	    <!-- Table --> 
+	    <table class="table">
+	      <thead>
+		<th>Prueba</th>
+		<th>Nota / M&aacute;ximo</th>
+	      </thead>
+	      
+	      
+
+	      <tr class="media-body">
+		<td>
+		  <h4 class="media-heading">
+		    
+		    Examen A
+		    
+		  </h4>
+		</td>
+		<td>8 / 10</td>
+	      </tr>
+	      
+	      
+	      
+
+	      <tr class="media-body">
+		<td>
+		  <h4 class="media-heading">
+		    
+		    <a href=/asignatura/entregas.html>Practica 0</a>
+		    
+		  </h4>
+		</td>
+		<td>7 / 10</td>
+	      </tr>
+	      
+	      
+	      
+
+	      <tr class="media-body">
+		<td>
+		  <h4 class="media-heading">
+		    
+		    Examen B
+		    
+		  </h4>
+		</td>
+		<td> / 10</td>
+	      </tr>
+	      
+	      
+	    </table>
+	  </div>
+	</div>
+      </div>
+      
+      
     </div>
-	
-
+  </div>
+</div>
+  
 	    </div>
         </div>
     </div>

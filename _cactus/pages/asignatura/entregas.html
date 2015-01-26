@@ -15,30 +15,29 @@
 <div class="entregas-content row media-nopadding filterable">
  {% for c in asignatura.data.entregas %}
  <div class="col-md-6 media">
-		    <div class="media-body pull-left">
+		    <div class="media-body col-md-6">
 			<h4 class="media-heading">
 			  <a href="/asignatura/entregas_details.html?entrega={{forloop.counter0}}"> {{c.titulo}} </a>
 			</h4>
 			<div class="text-muted"> 
 			    {{c.fecha | make_list | slice:":10" | join:"" }}
 			</div>
-			<div class="pull-left">
-		
-			  <span class="input-group-btn">
-			    <button class="btn btn-default" type="button">
-			      <span class="glyphicon glyphicon-upload"></span>
-			    </button>
-			  </span>
-			</div>
+
 		    </div>
-		    <div class="pull-right">
+		    <div class="pull-right col-md-4"><div>
 			<ul class="countdown list-inline" data-date="{{c.fecha}}">
 			    <li class="day"> <span class="days">00</span></li>
 			    <li class="seperator">d</li>
 			    <li> <span class="hours">00</span></li>
 			    <li class="seperator">:</li>
 			    <li> <span class="minutes">00</span></li>
-			</ul>		
+			</ul>	</div>
+	<div>
+			<span class="input-group-btn">
+			    <button class="btn btn-default" type="button">
+			      <span class="glyphicon glyphicon-open"></span>
+			    </button>
+			</span></div>
 		    </div>
 		</div> 
     {% endfor %}

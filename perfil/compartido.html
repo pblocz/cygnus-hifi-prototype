@@ -85,12 +85,12 @@
 	    <ul class="nav navbar-nav navbar-right">
 		<li class="dropdown user-navbar">
 		    <a href="/dsi-prototype/perfil/index.html" 
-		       class="active dropdown-toggle disabled" data-toggle="dropdown">
+		       class=" dropdown-toggle disabled" data-toggle="dropdown">
 			<img src="/dsi-prototype/static/images/40x40.gif" class="profile-image img-circle"> Username <b class="caret"></b>
 		    </a>
 		    <ul class="dropdown-menu">
 			
-			    <li class="active">
+			    <li class="">
 				<a href="/dsi-prototype/perfil/asignaturas.html"><span class='glyphicon glyphicon-book'></span> Asignaturas</a>
 			    </li>
 			
@@ -98,7 +98,7 @@
 				<a href="/dsi-prototype/perfil/apuntes.html"><span class='glyphicon glyphicon-pencil'></span> Apuntes</a>
 			    </li>
 			
-			    <li class="">
+			    <li class="active">
 				<a href="/dsi-prototype/perfil/compartido.html"><span class='glyphicon glyphicon-share'></span> Compartidos</a>
 			    </li>
 			
@@ -254,7 +254,7 @@
             <ul class="nav nav-tabs menu-nav">
 	        
 		    <li role="presentation"
-		        class="active" >
+		        class="" >
 		        <a href="/dsi-prototype/perfil/asignaturas.html"><span class='glyphicon glyphicon-book'></span> Asignaturas</a>
 		    </li>
 	        
@@ -264,7 +264,7 @@
 		    </li>
 	        
 		    <li role="presentation"
-		        class="" >
+		        class="active" >
 		        <a href="/dsi-prototype/perfil/compartido.html"><span class='glyphicon glyphicon-share'></span> Compartidos</a>
 		    </li>
 	        
@@ -287,34 +287,22 @@
 	    <div class="profile-main tabs-main">
 		
     <div class="row">
-	    <div class="drender" data-var="notifications.usuario.perfil.menu-alert.asignaturas" data-template="alert"></div>
+	    <div class="drender" data-var="notifications.usuario.perfil.menu-alert.compartido" data-template="alert"></div>
 
-	<div class="col-md-6 search-input">
-	    <div class="input-group">
+	<div class="col-lg-6">
+	    <div class="input-group search-input">
 		<input type="text" class="form-control" placeholder="Search for...">
 		<span class="input-group-btn">
 		    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
 		</span>
 	    </div><!-- /input-group -->
 	</div><!-- /.col-lg-6 -->
-    </div> <!-- /.row -->
-
-    <div class="entregas-content row media-nopadding filterable">
-	
-	    
-		<div class="col-md-6 media">
-		    <div class="media-body pull-left">
-			<h4 class="media-heading">
-			  <a href="/asignatura/general.html?asignatura_idx=0">[ANUM] Analisis Numérico (2014/15)</a>
-			</h4>
-			<div class="text-muted"> 
-			    Profesor: Maria Rosa Florencia
-			</div>
-		    </div>
-		</div>
-	    
     </div>
-	
+    <div class="row media-nopadding filterable">
+	<div class="drender" data-var="notifications.usuario.perfil.extras"
+	    data-template="lista-extras">
+	</div>
+    </div>
 
 	    </div>
         </div>
