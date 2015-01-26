@@ -71,6 +71,7 @@
   asignaturas:
     -
       nombre: "Analisis Numérico"
+      notageneral: 7.2
       siglas: "ANUM"
       profesor: "Maria Rosa Florencia"
       tutorias:
