@@ -263,3 +263,9 @@ $half-sh: $search-height / 2.0;
 	&:last-child:after { content: none; }
     }
 }
+
+.navbar-brand {
+    padding: 3px 10px;
+    img { max-height: 49px; }
+}
+

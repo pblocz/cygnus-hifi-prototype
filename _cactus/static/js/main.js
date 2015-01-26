@@ -244,6 +244,15 @@ $(function(){
 	    true
 	);
     });
+
+    $('.navbar-brand').hover(function(){
+	var src = $('img',this).attr('src').replace('.png','-white.png');
+	$('img',this).attr('src',src);
+    },
+    function(){
+	var src = $('img',this).attr('src').replace('-white.png','.png');
+	$('img',this).attr('src',src);  
+    });
 });
 
 
@@ -253,3 +262,5 @@ $.growl(false, {
     placement: { from: "bottom", align: "left" },
     allow_dismiss: false,
 });
+
+
