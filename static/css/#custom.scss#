@@ -267,5 +267,6 @@ $half-sh: $search-height / 2.0;
 .navbar-brand {
     padding: 3px 10px;
     img { max-height: 49px; }
+    &
 }
 
