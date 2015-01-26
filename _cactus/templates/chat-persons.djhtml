@@ -1,4 +1,4 @@
-<div class="chat-window col-xs-5 col-md-4 col-lg-3" id="chat_window_1">
+<div class="chat-window col-xs-6 col-md-5 col-lg-4" id="chat_window_1">
     <div class="col-xs-12 col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading top-bar">
@@ -20,6 +20,8 @@
 			    <a href="#profesores" aria-controls="profesores" role="tab" data-toggle="tab">Profesores</a></li>
 			<li role="presentation">
 			    <a href="#asignaturas" aria-controls="asignaturas" role="tab" data-toggle="tab">Asignaturas</a></li>
+<li role="presentation">
+			    <a href="#grupos" aria-controls="grupos" role="tab" data-toggle="tab">Grupos</a></li>
 		    </ul>
 
 		    <div class="tab-content">
@@ -95,13 +97,26 @@
 				    <div class="panel-heading" role="tab" id="headingTwo">
 					<h4 class="panel-title">
 					    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-						Collapsible Group Item #2
+						[ANUM] Análisis Numérico
 					    </a>
 					</h4>
 				    </div>
 				    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 					<div class="panel-body">
-					    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					     {% for i in CACTUS.pages %}
+
+						<a href="javascript:void(0)" class="contact-wrapper">
+						    <div class="media contact">
+							<div class="pull-left">
+							    <img class="contact-image media-object" src="{% static "/static/images/40x40.gif" %}"/>
+							</div>
+							<div class="contact-name media-body clearfix">
+							    <div> Rodolfo asdfasfd </div>
+							</div>
+						    </div> <!-- .contact -->
+						</a> <!-- .contact-wrapper -->
+
+					    {% endfor %}
 					</div>
 				    </div>
 				</div>
@@ -109,19 +124,119 @@
 				    <div class="panel-heading" role="tab" id="headingThree">
 					<h4 class="panel-title">
 					    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-						Collapsible Group Item #3
+						[IS] Ingeniería del Software
 					    </a>
 					</h4>
 				    </div>
 				    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 					<div class="panel-body">
-					    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					    {% for i in CACTUS.pages %}
+
+						<a href="javascript:void(0)" class="contact-wrapper">
+						    <div class="media contact">
+							<div class="pull-left">
+							    <img class="contact-image media-object" src="{% static "/static/images/40x40.gif" %}"/>
+							</div>
+							<div class="contact-name media-body clearfix">
+							    <div> Rodolfo asdfasfd </div>
+							</div>
+						    </div> <!-- .contact -->
+						</a> <!-- .contact-wrapper -->
+
+					    {% endfor %}
 					</div>
 				    </div>
 				</div>
 			    </div>
 			    
 			</div> <!-- #asignaturas -->
+			<div role="tabpanel" class="tab-pane" id="grupos">
+
+			    <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+				<div class="panel contactos-grupos panel-default">
+				    <div class="panel-heading" role="tab" id="headingOne2">
+					<h4 class="panel-title">
+					    <a data-toggle="collapse" data-parent="#accordion2" href="#dsi2" aria-expanded="true" aria-controls="dsi2">
+						Grupo04 DSI
+					    </a>
+					</h4>
+				    </div>
+				    <div id="dsi2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dsi2">
+					<div class="panel-body">
+					    {% for i in CACTUS.pages %}
+
+						<a href="javascript:void(0)" class="contact-wrapper">
+						    <div class="media contact">
+							<div class="pull-left">
+							    <img class="contact-image media-object" src="{% static "/static/images/40x40.gif" %}"/>
+							</div>
+							<div class="contact-name media-body clearfix">
+							    <div> Rodolfo asdfasfd </div>
+							</div>
+						    </div> <!-- .contact -->
+						</a> <!-- .contact-wrapper -->
+
+					    {% endfor %}			    
+					</div> <!-- .panel-body -->
+				    </div>
+				</div>
+				<div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingTwo2">
+					<h4 class="panel-title">
+					    <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+						Grupo ELP - Usuarios
+					    </a>
+					</h4>
+				    </div>
+				    <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo2">
+					<div class="panel-body">
+					     {% for i in CACTUS.pages %}
+
+						<a href="javascript:void(0)" class="contact-wrapper">
+						    <div class="media contact">
+							<div class="pull-left">
+							    <img class="contact-image media-object" src="{% static "/static/images/40x40.gif" %}"/>
+							</div>
+							<div class="contact-name media-body clearfix">
+							    <div> Rodolfo asdfasfd </div>
+							</div>
+						    </div> <!-- .contact -->
+						</a> <!-- .contact-wrapper -->
+
+					    {% endfor %}
+					</div>
+				    </div>
+				</div>
+				<div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingThree2">
+					<h4 class="panel-title">
+					    <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+						Grupo SWERC
+					    </a>
+					</h4>
+				    </div>
+				    <div id="collapseThree2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree2">
+					<div class="panel-body">
+					    {% for i in CACTUS.pages %}
+
+						<a href="javascript:void(0)" class="contact-wrapper">
+						    <div class="media contact">
+							<div class="pull-left">
+							    <img class="contact-image media-object" src="{% static "/static/images/40x40.gif" %}"/>
+							</div>
+							<div class="contact-name media-body clearfix">
+							    <div> Rodolfo asdfasfd </div>
+							</div>
+						    </div> <!-- .contact -->
+						</a> <!-- .contact-wrapper -->
+
+					    {% endfor %}
+					</div>
+				    </div>
+				</div>
+			    </div>
+			    
+			</div> <!-- #grupos -->
 		    </div>
 
 
@@ -129,7 +244,7 @@
 
 		<div class="panel-footer">
                     <div class="input-group">
-			<input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Write your message here..." />
+			<input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Buscar..." />
 			<span class="input-group-btn">
                             <button class="btn btn-primary btn-sm" id="btn-chat">
 				<span class="glyphicon glyphicon-search"></span>

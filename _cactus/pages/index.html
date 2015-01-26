@@ -1,13 +1,18 @@
+<script>window.location="./perfil/asignaturas.html";</script>
+{%comment%}
 {% extends "base.html" %}
-
 {% block title %} 
   {%with asignatura=data.notifications.asignaturas.0 %} 
   [{{asignatura.siglas}}] {{asignatura.nombre}} 
   {%endwith%}
 {% endblock %}
+{% block scripts %}
+
+{% endblock %}
 
 {% block body %}
   {% include 'asignatura.djhtml' with asignatura=data.notifications.asignaturas.0 %}
+
    <!--  
 <div class="jumbotron">-->
   <!--<div class="container">-->
@@ -48,3 +53,4 @@
 -->
 <!-- </div> -->
 {% endblock %}
+{% endcomment %}

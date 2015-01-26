@@ -15,7 +15,7 @@
 <div class="row media-nopadding filterable">
 
  {% for c in asignatura.data.problemas %}
-	<div class="col-sm-6 media">
+	<div class="col-sm-6 media apuntes" data-var="notifications.asignaturas.0.data.problemas.{{forloop.counter0}}">
 	    <div class="pull-left">
 		<a href="#" class="pull-left">
 		    <img src="{% static c.img %}" class="media-object"/>
@@ -28,7 +28,7 @@
 		<div>{{c.tamano}} | {{c.fecha}}</div>
 	    </div>
 	    <div class="pull-right btn-group" role="group">
-		<button type="button" class="btn btn-default">
+		<button type="button" class="btn btn-default btn-save">
 		    <span class="glyphicon glyphicon-heart"></span>
 		</button>
 		<button type="button" class="btn btn-default">

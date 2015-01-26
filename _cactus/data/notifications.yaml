@@ -33,8 +33,10 @@
       menu:
         - url: "/perfil/asignaturas.html"
           nombre: "<span class='glyphicon glyphicon-book'></span> Asignaturas"
+        - url: ""
+          nombre: "<span class='glyphicon glyphicon-calendar'></span> Calendario"
         - url: "/perfil/apuntes.html"
-          nombre: "<span class='glyphicon glyphicon-pencil'></span> Apuntes"
+          nombre: "<span class='glyphicon glyphicon-bookmark'></span> Guardado"
         - url: "/perfil/compartido.html"
           nombre: "<span class='glyphicon glyphicon-share'></span> Compartidos"
         - url: "/perfil/entregas.html"

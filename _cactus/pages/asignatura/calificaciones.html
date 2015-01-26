@@ -23,7 +23,7 @@
 	  <td>
 	    <h4 class="media-heading">
 	      {% if c.entrega %}
-	      <a href={{c.url}}>{{c.nombre}}</a>
+	      <a href="{% url '/asignatura/entregas.html' %}">{{c.nombre}}</a>
 	      {% else %}
 	      {{c.nombre}}
 	      {% endif %}

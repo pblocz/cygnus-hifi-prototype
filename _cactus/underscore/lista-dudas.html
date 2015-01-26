@@ -1,4 +1,4 @@
-{% _.each(data, function(a) { var c = drender.getvar(a); var parts = a.split('.'); var num = parseInt(parts[parts.length-1]); console.log(num); %}
+{% _.each(data, function(a) { var c = drender.getvar(a); var parts = a.split('.'); var num = parseInt(parts[parts.length-1]); %}
 
 <div class="col-sm-6 media dudas" data-var="{{a}}">
     <div class="pull-left">
@@ -8,7 +8,7 @@
     </div>
     <div class="media-body pull-left">
 	<h4 class="media-heading">
-	  <a href="{{ url('/perfil/dudas_details.html?duda_idx='+num) }}"> {{c.titulo}} </a>
+	  <a href="{{ url('/perfil/dudas_details.html?duda_idx='+num) }}">[ASIGNATURA] {{c.titulo}} </a>
 	</h4>
 	<div class="text-muted">{{c.autor}} | {{c.fecha}} | {{c.respuestas.length}} respuestas</div>
     </div>
