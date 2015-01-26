@@ -8,7 +8,7 @@
 		<span class="icon-bar"></span>
 	    </button>
 	    <a class="navbar-brand" href="{% url "/perfil/asignaturas.html" %}">
-		<img src="{% static '/static/images/cygnus.png' %}"/>Cygnus</a>
+		<img heigth="100%" src="{% static '/static/images/cygnus.png' %}"/>Cygnus</a>
 	</div> <!-- .nav-header -->
 
 
