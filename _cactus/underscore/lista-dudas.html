@@ -2,7 +2,7 @@
 
 <div class="col-sm-6 media dudas" data-var="{{a}}">
     <div class="pull-left">
-	<a href="/perfil/dudas_details.html?duda_idx={{num}}" class="pull-left">
+	<a href="{{ url('/perfil/dudas_details.html?duda_idx='+num) }}" class="pull-left">
 	    <img src="{{ static(c.img) }}" class="media-object"/>
 	</a>
     </div>
