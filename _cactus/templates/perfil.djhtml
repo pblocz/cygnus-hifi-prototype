@@ -43,7 +43,7 @@
         <div class="col-sm-9">
             <ul class="nav nav-tabs menu-nav">
 	        {% for m in alumno.perfil.menu %}
-		    <li role="presentation"
+		    <li role="presentation" id="main_{{m.id}}"
 		        class="{% if_current_page m.url 'active' ''%}" >
 		        <a href="{% url m.url%}">{{ m.nombre | safe }}</a>
 		    </li>
@@ -56,4 +56,3 @@
     </div>
 {% endwith %}{% endblock %}
 
-{% block scripts %}{% endblock %}

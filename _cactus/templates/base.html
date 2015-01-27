@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="{% static '/static/css/bootstrap-select.css' %}">
 	<link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
         <link rel="stylesheet" href="{% static '/static/css/animate.css' %}">
-
+	{% block extralink %}{% endblock %}
 
 	<link rel="stylesheet" href="{% static '/static/css/chat.css' %}">
         <link rel="stylesheet" href="{% static '/static/css/custom.css' %}">
@@ -62,7 +62,7 @@
 	<script src="{% static '/static/js/chat.js' %}"></script>
 
 	<script src="{% static '/static/js/main.js' %}"></script>
-
+	{% block extrascript %}{% endblock %}
     </body>
 
     {% block scripts %}

@@ -13,6 +13,24 @@
 		</span>
 	    </div><!-- /input-group -->
 	</div><!-- /.col-lg-6 -->
+<div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-th-large"></span></button>
+	<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-th"></span></button>
+	<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-th-list"></span></button>
+      </span>
+   <span class="input-group-btn">
+      <span class="input-group-btn pull-right">
+	<a href="{% url '/perfil/calendar.html' %}" class="btn btn-primary pull-right" type="button">
+	  <span class="glyphicon glyphicon-calendar {% if c.entregada %} text-muted{% endif %}"></span>
+	</a>
+      </span>
+
+   </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+
     </div> <!-- /.row -->
 
     <div class="entregas-content row media-nopadding filterable">
@@ -39,6 +57,7 @@
 			</ul>	
 		      </div><div>
 			<span class="input-group-btn">
+			  
 			    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#mmodal{{forloop.counter0}}">
 			      <span class="glyphicon glyphicon-open {% if c.entregada %} text-muted{% endif %}"></span>
 			    </button>

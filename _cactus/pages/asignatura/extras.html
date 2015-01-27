@@ -16,8 +16,22 @@
       </span>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
+<div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-th-large"></span></button>
+	<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-th"></span></button>
+	<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-th-list"></span></button>
+      </span>
+
+      <span class="input-group-btn">
+	<button class="btn btn-default pull-right" type="button"><span class="glyphicon glyphicon-cloud-upload"></span></button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div>
  </div>
-<div class="row media-nopadding filterable">
+<div class="row media-nopadding filterable espacio">
 
  {% for c in asignatura.data.extra %}
 	<div class="col-sm-6 media extras" data-var="notifications.asignaturas.0.data.extra.{{forloop.counter0}}">

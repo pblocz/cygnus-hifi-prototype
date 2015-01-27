@@ -3,7 +3,7 @@
 	{% for c in content %}
 	    <div class="event">
 		<h4 class="event-heading">
-		    <a href="#">{{c.titulo}}</a>
+		    <a href="{% url '/contact.html' %}">{{c.titulo}}</a>
 		</h4>
 		<div class="event-description">
 		    <ul class="dotted-list">
