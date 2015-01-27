@@ -3,7 +3,7 @@
 	{% for c in content %}
 	    <div class="event">
 		<h4 class="event-heading">
-		    <a href="{{c.url}}">{{c.titulo}}</a>
+		    <a href="{% url c.url %}">{{c.titulo}}</a>
 		</h4>
 		<div class="event-description">{{c.fecha}}</div>
 	    </div>

@@ -41,7 +41,7 @@
 		    </div>
 		    <div class="pull-right col-md-4">
 		      <div class="clearfix">
-			<ul class="countdown list-inline" data-date="{{c.fecha}}">
+			<ul class="countdown list-inline pull-right" data-date="{{c.fecha}}">
 			    <li class="day"> <span class="days">00</span></li>
 			    <li class="seperator">d</li>
 			    <li> <span class="hours">00</span></li>
@@ -50,7 +50,7 @@
 			</ul>	
 		      </div><div>
 			<span class="input-group-btn">
-			    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#mmodal{{forloop.counter0}}">
+			    <button class="btn btn-default pull-right" type="button" data-toggle="modal" data-target="#mmodal{{forloop.counter0}}">
 			      <span class="glyphicon glyphicon-open {% if c.entregada %} text-muted{% endif %}"></span>
 			    </button>
 			  </span>

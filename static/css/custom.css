@@ -95,8 +95,7 @@
     .countdown > li {
       padding: 0;
       float: left;
-      vertical-align: middle;
-      line-height: 44px; }
+      vertical-align: middle; }
       .countdown > li.day + li {
         margin-right: 6px; }
 
