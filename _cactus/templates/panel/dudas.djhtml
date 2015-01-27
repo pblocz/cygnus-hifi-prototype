@@ -13,7 +13,7 @@ variable
 	    </div>
 	    <div class="media-body pull-left">
 		<h4 class="media-heading">
-		    <a href="/asignatura/dudas_details.html?duda_idx={{forloop.counter0}}" > {{c.titulo}}</a>
+		    <a href="./dudas_details.html?duda_idx={{forloop.counter0}}" > {{c.titulo}}</a>
 		</h4>
 		<ul class="list-unstyled bar-sep text-muted">
 		    <li>{{c.autor}}</li>
