@@ -6,9 +6,6 @@
     </script>
 {% endblock %}
 {% block profile-main %}
-<ol class="breadcrumb">
-    <li><a href="/perfil/dudas.html">Dudas</a></li>
-    <li class="active" data-var="notifications.asignaturas.0.data.dudas[{duda_idx}].titulo"></li>
-</ol>
+<a href="/perfil/dudas.html">Volver a dudas</a>
     <div class="drender" data-template="dudas_detail" data-var="notifications.asignaturas.0.data.dudas[{duda_idx}]"></div>
 {% endblock %}
