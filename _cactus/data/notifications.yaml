@@ -249,12 +249,14 @@
             file: ""
             nota: ""
             desc: "Esta practica consiste en blabla bla bla bla bla."
+            img: "/static/images/40x40.gif"
           - titulo: "Practica 2"
             fecha: "01/02/2015 05:00:00"
             entregada: false
             file: ""
             nota: ""
             desc: "Esta practica consiste en blabla bla bla bla bla."
+            img: "/static/images/40x40.gif"
           - titulo: "Practica 1"
             fecha: "02/10/2014 05:00:00"
             desc: "Esta practica consiste en blabla bla bla bla bla."
@@ -262,6 +264,7 @@
             file: "P0_yo.tar.gz"
             nota: "9/10"
             comentario: "Casi perfecta, pasate por mi despacho para comentar el error."
+            img: "/static/images/40x40.gif"
     -
       nombre: "Desarrollo de Sistemas Interactivos"
       notageneral: 9.9
@@ -312,22 +315,28 @@
             max: "10"
             entrega: "true"
             url: "/asignatura/entregas.html"
+            img: "/static/images/40x40.gif"
           -
             nombre: "Practica 2"
             nota: "9.1"
             max: "10"
             entrega: "true"
             url: "/asignatura/entregas.html"
+            img: "/static/images/40x40.gif"
           -
             nombre: "Practica 3"
             nota: ""
             max: "10"
             entrega: "true"
             url: "/asignatura/entregas.html"
+            img: "/static/images/40x40.gif"
+
           -
             nombre: "Proyecto"
             nota: "10"
             max: "10"
+            img: "/static/images/40x40.gif"
+
         apuntes:
           -
             nombre: "Tema 1.pdf"
@@ -457,18 +466,21 @@
             file: ""
             nota: "/10"
             desc: "Siiiiiii"
+            img: "/static/images/40x40.gif"
           - titulo: "Practica 3"
             fecha: "10/02/2015 08:00:00"
             entregada: false
             file: ""
             nota: "/10"
             desc: "Esta practica consiste en blabla bla bla bla bla."
+            img: "/static/images/40x40.gif"
           - titulo: "Practica 2"
             fecha: "01/02/2015 05:00:00"
             entregada: true
             file: ""
             nota: "9.2/10"
             desc: "Esta practica consiste en blabla bla bla bla bla."
+            img: "/static/images/40x40.gif"
           - titulo: "Practica 1"
             fecha: "02/10/2014 05:00:00"
             desc: "Esta practica consiste en blabla bla bla bla bla."
@@ -476,6 +488,7 @@
             file: "P0_Grupo4.tar.gz"
             nota: "9.1/10"
             comentario: "Casi perfecta, pasate por mi despacho para comentar el error."
+            img: "/static/images/40x40.gif"
     -
       nombre: "Ingeniería del Software"
       notageneral: 5
@@ -666,3 +679,5 @@
             file: ""
             nota: "/10"
             desc: "Siiiiiii"
+            img: "/static/images/40x40.gif"
+
