@@ -2440,7 +2440,7 @@ input[type="button"].btn-block {
   content: "\e003";
 }
 
-.glyphicon-heart:before {
+.glyphicon-bookmark:before {
   content: "\e005";
 }
 
@@ -2940,7 +2940,7 @@ input[type="button"].btn-block {
   content: "\e141";
 }
 
-.glyphicon-heart-empty:before {
+.glyphicon-bookmark-empty:before {
   content: "\e143";
 }
 
