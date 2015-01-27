@@ -139,26 +139,32 @@
 .saved .glyphicon-bookmark {
   color: #FF1010; }
 
-  .dropdown-menu {
-    border: 2px solid #999999;
-    border-top-width: 0px;
-    padding: 0px;
-    max-height: 250px; }
-    .dropdown-menu .event-list {
-      min-width: 200px;
-      padding: 10px 0; }
-      .dropdown-menu .event-list .event {
-        padding: 8px 10px;
-        border-bottom: 1px solid #ccc; }
-        .dropdown-menu .event-list .event:last-child {
-          border-bottom: none; }
-          .dropdown-menu .event-list .event .event-heading {
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            margin: 0; }
-            .dropdown-menu .event-list .event .event-description {
-              font-size: 80%;
-              color: #999999; }
+  .glyphicon-th-list {
+    color: #FF1010; }
+
+    .espacio {
+      margin-top: 20px !important; }
+
+      .dropdown-menu {
+        border: 2px solid #999999;
+        border-top-width: 0px;
+        padding: 0px;
+        max-height: 250px; }
+        .dropdown-menu .event-list {
+          min-width: 200px;
+          padding: 10px 0; }
+          .dropdown-menu .event-list .event {
+            padding: 8px 10px;
+            border-bottom: 1px solid #ccc; }
+            .dropdown-menu .event-list .event:last-child {
+              border-bottom: none; }
+              .dropdown-menu .event-list .event .event-heading {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                margin: 0; }
+                .dropdown-menu .event-list .event .event-description {
+                  font-size: 80%;
+                  color: #999999; }
 
 .dotted-list {
   padding: 0px; }

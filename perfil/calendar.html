@@ -26,6 +26,8 @@
 	<link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
         <link rel="stylesheet" href="/dsi-prototype/static/css/animate.css">
 	
+        <link rel="stylesheet" href="/dsi-prototype/static/css/calendar.css">
+
 
 	<link rel="stylesheet" href="/dsi-prototype/static/css/chat.css">
         <link rel="stylesheet" href="/dsi-prototype/static/css/custom.css">
@@ -100,7 +102,7 @@
 				<a href="/dsi-prototype/perfil/apuntes.html"><span class='glyphicon glyphicon-bookmark'></span> Guardado</a>
 			    </li>
 			
-			    <li class="active">
+			    <li class="">
 				<a href="/dsi-prototype/perfil/entregas.html"><span class='glyphicon glyphicon-dashboard'></span> Entregas</a>
 			    </li>
 			
@@ -262,7 +264,7 @@
 		    </li>
 	        
 		    <li role="presentation" id="main_entregas"
-		        class="active" >
+		        class="" >
 		        <a href="/dsi-prototype/perfil/entregas.html"><span class='glyphicon glyphicon-dashboard'></span> Entregas</a>
 		    </li>
 	        
@@ -279,280 +281,12 @@
 	    </ul>
 	    <div class="profile-main tabs-main">
 		
-    <div class="row">
-	<div class="drender" data-var="notifications.usuario.perfil.menu-alert.entregas" data-template="alert"></div>
-
-	<div class="col-md-6 search-input">
-	    <div class="input-group">
-		<input type="text" class="form-control" placeholder="Search for...">
-		<span class="input-group-btn">
-		    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-		</span>
-	    </div><!-- /input-group -->
-	</div><!-- /.col-lg-6 -->
-<div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-th-large"></span></button>
-	<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-th"></span></button>
-	<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-th-list"></span></button>
-      </span>
-   <span class="input-group-btn">
-      <span class="input-group-btn pull-right">
-	<a href="/dsi-prototype/perfil/calendar.html" class="btn btn-primary pull-right" type="button">
-	  <span class="glyphicon glyphicon-calendar "></span>
-	</a>
-      </span>
-
-   </span>
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-
-    </div> <!-- /.row -->
-
-    <div class="entregas-content row media-nopadding filterable">
-	
-	    
-	<div class="col-md-6 media">
-		    <div class="media-body col-md-7">
-			<h4 class="media-heading">
-			  <a href="#" data-toggle="modal" data-target="#mmodal0">[ANUM] Practica 10 </a>
-			</h4>
-			<div class="text-muted"> 
-			    10/02/2015
-			</div>
-
-		    </div>
-		    <div class="pull-right col-md-4">
-		      <div class="clearfix">
-			<ul class="countdown list-inline" data-date="10/02/2015 08:00:00">
-			    <li class="day"> <span class="days">00</span></li>
-			    <li class="seperator">d</li>
-			    <li> <span class="hours">00</span></li>
-			    <li class="seperator">:</li>
-			    <li> <span class="minutes">00</span></li>
-			</ul>	
-		      </div><div>
-			<span class="input-group-btn">
-			  
-			    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#mmodal0">
-			      <span class="glyphicon glyphicon-open "></span>
-			    </button>
-			  </span>
-		      </div>
-		    </div>
-		</div> 
-
-<!-- Modal -->
-<div class="modal fade" id="mmodal0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Practica 10</h4>
-
-      </div>
-      <div class="modal-body">
-	<div class="text-muted clearfix"> 
-	  
-	  <div class="fechisima pull-left col-md-6">  10/02/2015</div>	
-          <ul class="countdown list-inline pull-right" data-date="10/02/2015 08:00:00">
-	    <li>Tiempo restante:&nbsp;</li>
-	    <li class="day"> <span class="days">00</span></li>
-	    <li class="seperator">d</li>
-	    <li> <span class="hours">00</span></li>
-	    <li class="seperator">:</li>
-	    <li> <span class="minutes">00</span></li> 
-	    <li class="seperator">:</li>
-	    <li> <span class="seconds">00</span></li>
-	  </ul>
-	</div>	
-	<div class="media-body">
-	  Esta practica consiste en blabla bla bla bla bla.
-	</div> 
-	<div class="divider">&nbsp;</div>
-	
-	<div class="media-body">
-	  <label name=MAX_FILE_SIZE>Tamaño máximo: 5 MB </label>
-          <INPUT class="btn" type=file name="nom_del_archivo">
-	  <label class="text-muted plus-file">+ Añadir otro archivo</label>
-	  <br/>
-          <INPUT class="btn btn-primary" type=submit value="Enviar">
-	  
-	</div> 	
-	
-      </div>
-      <div class="modal-footer">
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	<a href="/dsi-prototype/asignatura/dudas.html"type="button" class="btn btn-default">Dudas</a>
-	<a type="button" class="btn btn-primary">Enunciado</a>
-      </div>
-    </div>
-  </div>
+<a href="/dsi-prototype/perfil/entregas.html">Volver a entregas</a>
+<div class="container">
+    <hr>
+	<div id="calendar"></div>
 </div>
-	    
-	<div class="col-md-6 media">
-		    <div class="media-body col-md-7">
-			<h4 class="media-heading">
-			  <a href="#" data-toggle="modal" data-target="#mmodal1">[ANUM] Practica 1 </a>
-			</h4>
-			<div class="text-muted"> 
-			    01/02/2015
-			</div>
 
-		    </div>
-		    <div class="pull-right col-md-4">
-		      <div class="clearfix">
-			<ul class="countdown list-inline" data-date="01/02/2015 05:00:00">
-			    <li class="day"> <span class="days">00</span></li>
-			    <li class="seperator">d</li>
-			    <li> <span class="hours">00</span></li>
-			    <li class="seperator">:</li>
-			    <li> <span class="minutes">00</span></li>
-			</ul>	
-		      </div><div>
-			<span class="input-group-btn">
-			  
-			    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#mmodal1">
-			      <span class="glyphicon glyphicon-open "></span>
-			    </button>
-			  </span>
-		      </div>
-		    </div>
-		</div> 
-
-<!-- Modal -->
-<div class="modal fade" id="mmodal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Practica 1</h4>
-
-      </div>
-      <div class="modal-body">
-	<div class="text-muted clearfix"> 
-	  
-	  <div class="fechisima pull-left col-md-6">  01/02/2015</div>	
-          <ul class="countdown list-inline pull-right" data-date="01/02/2015 05:00:00">
-	    <li>Tiempo restante:&nbsp;</li>
-	    <li class="day"> <span class="days">00</span></li>
-	    <li class="seperator">d</li>
-	    <li> <span class="hours">00</span></li>
-	    <li class="seperator">:</li>
-	    <li> <span class="minutes">00</span></li> 
-	    <li class="seperator">:</li>
-	    <li> <span class="seconds">00</span></li>
-	  </ul>
-	</div>	
-	<div class="media-body">
-	  Esta practica consiste en blabla bla bla bla bla.
-	</div> 
-	<div class="divider">&nbsp;</div>
-	
-	<div class="media-body">
-	  <label name=MAX_FILE_SIZE>Tamaño máximo: 5 MB </label>
-          <INPUT class="btn" type=file name="nom_del_archivo">
-	  <label class="text-muted plus-file">+ Añadir otro archivo</label>
-	  <br/>
-          <INPUT class="btn btn-primary" type=submit value="Enviar">
-	  
-	</div> 	
-	
-      </div>
-      <div class="modal-footer">
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	<a href="/dsi-prototype/asignatura/dudas.html"type="button" class="btn btn-default">Dudas</a>
-	<a type="button" class="btn btn-primary">Enunciado</a>
-      </div>
-    </div>
-  </div>
-</div>
-	    
-	<div class="col-md-6 media">
-		    <div class="media-body col-md-7">
-			<h4 class="media-heading">
-			  <a href="#" data-toggle="modal" data-target="#mmodal2">[ANUM] Practica 0 </a>
-			</h4>
-			<div class="text-muted"> 
-			    02/10/2014
-			</div>
-
-		    </div>
-		    <div class="pull-right col-md-4">
-		      <div class="clearfix">
-			<ul class="countdown list-inline" data-date="02/10/2014 05:00:00">
-			    <li class="day"> <span class="days">00</span></li>
-			    <li class="seperator">d</li>
-			    <li> <span class="hours">00</span></li>
-			    <li class="seperator">:</li>
-			    <li> <span class="minutes">00</span></li>
-			</ul>	
-		      </div><div>
-			<span class="input-group-btn">
-			  
-			    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#mmodal2">
-			      <span class="glyphicon glyphicon-open  text-muted"></span>
-			    </button>
-			  </span>
-		      </div>
-		    </div>
-		</div> 
-
-<!-- Modal -->
-<div class="modal fade" id="mmodal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Practica 0</h4>
-
-      </div>
-      <div class="modal-body">
-	<div class="text-muted clearfix"> 
-	  
-	  <div class="fechisima pull-left col-md-6">  02/10/2014</div>	
-          <ul class="countdown list-inline pull-right" data-date="02/10/2014 05:00:00">
-	    <li>Tiempo restante:&nbsp;</li>
-	    <li class="day"> <span class="days">00</span></li>
-	    <li class="seperator">d</li>
-	    <li> <span class="hours">00</span></li>
-	    <li class="seperator">:</li>
-	    <li> <span class="minutes">00</span></li> 
-	    <li class="seperator">:</li>
-	    <li> <span class="seconds">00</span></li>
-	  </ul>
-	</div>	
-	<div class="media-body">
-	  Esta practica consiste en blabla bla bla bla bla.
-	</div> 
-	<div class="divider">&nbsp;</div>
-	
-	<div class="media-body">
-	  <span>Archivos subidos:</span>
-	  <ul>
-	    <li><a href="#">P0_yo.tar.gz</a></li>
-	  </ul>
-	  <br/>
-	  <h3>Nota: 9/10</h3>
-	  <h3>Comentario del profesor:</h3>
-	  <span>Casi perfecta, pasate por mi despacho para comentar el error.</span>
-	  
-	</div> 
-	
-      </div>
-      <div class="modal-footer">
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	<a href="/dsi-prototype/asignatura/dudas.html"type="button" class="btn btn-default">Dudas</a>
-	<a type="button" class="btn btn-primary">Enunciado</a>
-      </div>
-    </div>
-  </div>
-</div>
-	    
-	
-    </div>
-	
 
 	    </div>
         </div>
@@ -3260,9 +2994,75 @@
 
 	<script src="/dsi-prototype/static/js/main.js"></script>
 	
+	<script src="/dsi-prototype/static/js/fullcalendar.min.js"></script>
+
     </body>
 
     
-    
+	<script>
+  var date = new Date();
+  var d = date.getDate();
+  var m = date.getMonth();
+  var y = date.getFullYear();
+  
+  $('#calendar').fullCalendar({
+    header: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'month,agendaWeek,agendaDay'
+    },
+    editable: true,
+    events: [
+      {
+        title: 'All Day Event',
+        start: new Date(y, m, 1)
+      },
+      {
+        title: 'Long Event',
+        start: new Date(y, m, d-5),
+        end: new Date(y, m, d-2)
+      },
+      {
+        id: 999,
+        title: 'Repeating Event',
+        start: new Date(y, m, d-3, 16, 0),
+        allDay: false
+      },
+      {
+        id: 999,
+        title: 'Repeating Event',
+        start: new Date(y, m, d+4, 16, 0),
+        allDay: false
+      },
+      {
+        title: 'Meeting',
+        start: new Date(y, m, d, 10, 30),
+        allDay: false
+      },
+      {
+        title: 'Lunch',
+        start: new Date(y, m, d, 12, 0),
+        end: new Date(y, m, d, 14, 0),
+        allDay: false
+      },
+      {
+        title: 'Birthday Party',
+        start: new Date(y, m, d+1, 19, 0),
+        end: new Date(y, m, d+1, 22, 30),
+        allDay: false
+      },
+      {
+        title: 'Click for Google',
+        start: new Date(y, m, 28),
+        end: new Date(y, m, 29),
+        url: 'http://google.com/'
+      }
+    ]
+	  });</script>
+
+    <script>
+     $("#main_entregas").addClass("active");
+    </script>
+
 
 </html>

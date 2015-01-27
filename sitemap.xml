@@ -56,6 +56,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>/perfil/calendar.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>/asignatura/apuntes.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -87,6 +92,11 @@
     </url>
     <url>
         <loc>/asignatura/calificaciones.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/asignatura/calendar.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
