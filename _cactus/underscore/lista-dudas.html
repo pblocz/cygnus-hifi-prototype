@@ -8,7 +8,7 @@
     </div>
     <div class="media-body pull-left">
 	<h4 class="media-heading">
-	  <a href="{{ url('/perfil/dudas_details.html?duda_idx='+num) }}">[ASIGNATURA] {{c.titulo}} </a>
+	  <a href="{{ url('/perfil/dudas_details.html?duda_idx='+num) }}">[{{c.sign}}] {{c.titulo}} </a>
 	</h4>
 	<div class="text-muted">{{c.autor}} | {{c.fecha}} | {{c.respuestas.length}} respuestas</div>
     </div>

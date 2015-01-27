@@ -37,8 +37,6 @@
           nombre: "<span class='glyphicon glyphicon-calendar'></span> Calendario"
         - url: "/perfil/apuntes.html"
           nombre: "<span class='glyphicon glyphicon-bookmark'></span> Guardado"
-        - url: "/perfil/compartido.html"
-          nombre: "<span class='glyphicon glyphicon-share'></span> Compartidos"
         - url: "/perfil/entregas.html"
           nombre: "<span class='glyphicon glyphicon-dashboard'></span> Entregas"
         - url: "/perfil/dudas.html"
@@ -201,6 +199,7 @@
             autor: "Juan Martin"
             nuevo: "false"
             like: "false"
+            sign: "ANUM"
             respuestas:
               -
                 autor: "Diego García"
@@ -224,6 +223,7 @@
             autor: "Juan Martin"
             nuevo: "false"
             like: "false"
+            sign: "ANUM"
             respuestas:
               -
                 autor: "Diego García"
