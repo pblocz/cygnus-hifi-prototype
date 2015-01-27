@@ -4,7 +4,7 @@ $main-offset: 30px;
 $notify-color: red;
 $second-color: #999999;
 $light-second-color: lighten($second-color,20%);
-$heart-color: #EA70A3;
+$bookmark-color: #FF1010;
 
 /* bootstrap media queries 
 @media (min-width: 1200px) 
@@ -217,7 +217,7 @@ $half-sh: $search-height / 2.0;
 
 
 // set style for perfil apuntes
-.saved .glyphicon-heart { color: $heart-color; }
+.saved .glyphicon-bookmark { color: $bookmark-color; }
 
 
 // event dropdown style
