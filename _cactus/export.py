@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 import subprocess, os, json, shutil
 
-JSON = { "site-url": "/dsi-prototype", "export": True }
+JSON = { "site-url": "/cygnus-hifi-prototype", "export": True }
 
 
 def main():
